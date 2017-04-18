@@ -1,0 +1,21 @@
+digraph {
+  rankdir=LR
+  bgcolor="deepskyblue:aliceblue"
+
+  node[fillcolor="white:azure2",style=filled]
+
+  "npm run test" [shape=circle, xlabel="npm run test",label=""]
+  "target.test" [label="`target.test`
+---
+lint
+checkRuleFiles (isInConfig, hasIdInTitle, ...)
+istanbul + mocha
+istanbul check-coverage
+browserify
+karma
+checkLicenses
+",shape=box]
+
+  "Makefile.js" ->  "target.test"
+  "npm run test" -> "Makefile.js"
+}

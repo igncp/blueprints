@@ -1,0 +1,35 @@
+digraph {
+  compound=true
+  bgcolor="deepskyblue:aliceblue"
+  label=<<B>Rule 'key-spacing' flow</B>>
+  labelloc=t
+
+  node[fillcolor="white:azure2",style=filled]
+
+  subgraph cluster_1 {
+    label="lib/rules/key-spacing.js";
+    bgcolor="none"
+
+    node[shape=plaintext]
+
+    "lib/rules/key-spacing.js#create" -> "verifyAlignment()"
+    "lib/rules/key-spacing.js#create" [label="+ create()"]
+    "verifyAlignment()" -> "context.report()"
+
+	}
+
+  "espree" [shape="hexagon"]
+  "key-spacing: 2" [shape="box"]
+
+  "key-spacing: 2" -> "lib/cli.js"
+
+  "lib/ast-utils" -> "espree"
+  "lib/cli-engine.js" -> "lib/eslint.js" [label="api.verify"]
+  "lib/cli.js" -> "lib/cli-engine.js"
+  "lib/cli.js" -> "lib/rules.js"
+  "lib/eslint.js" -> "lib/rule-context.js" [label="api.verify"]
+  "lib/eslint.js" -> "lib/rules.js" [label="api.verify"]
+  "lib/rules.js" -> "lib/load-rules.js"
+  "lib/rules.js" -> "lib/rules/key-spacing.js#create"  [lhead=cluster_1]
+  "lib/rules/key-spacing.js#create" -> "lib/ast-utils"  [ltail=cluster_1]
+}
