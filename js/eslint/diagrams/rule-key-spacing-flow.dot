@@ -15,7 +15,6 @@ digraph {
     "lib/rules/key-spacing.js#create" -> "verifyAlignment()"
     "lib/rules/key-spacing.js#create" [label="+ create()"]
     "verifyAlignment()" -> "context.report()"
-
 	}
 
   "espree" [shape="hexagon"]

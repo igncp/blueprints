@@ -1,0 +1,29 @@
+digraph {
+  compound=true
+  bgcolor="deepskyblue:lightblue"
+  label=<<B>Rule 'indent' structure</B>>
+  graph [autosize=false, size="11.8", ratio=0.4]
+  labelloc=t
+  fontsize=20
+  rankdir=LR
+
+  node[fillcolor="white:azure2",style=filled]
+  create_return[label="return { ... (> 20) }"]
+  e1, e2, e3[label="...", shape=plaintext, fillcolor=none,fontcolor=red];
+  edge[len=0.5]
+  "class TokenInfo", "class OffsetStorage"[shape=hexagon,color=yellow]
+
+  "module.exports" -> "create(context)"
+  "module.exports" -> meta
+  meta -> fixable
+  meta -> schema
+  meta -> e1 [color="black:white:black"]
+  "create(context)" -> create_return
+  "create(context)" -> e2 [color="black:white:black"]
+  "create(context)" -> "class TokenInfo"[color=yellow]
+  "create(context)" -> "class OffsetStorage"[color=yellow]
+  create_return -> "Program:exit"
+  "Program:exit" -> "context.getSourceCode().ast.tokens"
+  "Program:exit" -> "context.getSourceCode().lines"
+  "Program:exit" -> e3[color="black:white:black"]
+}
