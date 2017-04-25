@@ -1,0 +1,38 @@
+digraph CoreStructure {
+  bgcolor="deepskyblue:lightblue"
+  compound=true
+  fontsize=20
+  label=<<B>Core Package Structure</B>>
+  labelloc=t
+  nodesep=0.7
+
+  node[fillcolor="white:azure2",style=filled]
+
+  "graphql"[fillcolor="black:gray27",fontcolor="white"]
+
+  edge[color=purple]
+
+  "index.ts" -> "rq"[lhead=cluster_runQuery]
+  "index.ts" -> "runHTTPQuery.ts"
+  "index.ts" -> "graphqlOptions.ts"
+  "runHTTPQuery.ts" -> "graphqlOptions.ts"
+  "runHTTPQuery.ts" -> "rq"[lhead=cluster_runQuery]
+  "runHTTPQuery.ts" -> "graphql"[color=yellow]
+  "graphqlOptions.ts" -> "rq"[lhead=cluster_runQuery]
+  "graphqlOptions.ts" -> "graphql"[color=yellow]
+
+  subgraph cluster_runQuery {
+    bgcolor="white:azure3"
+    label="runQuery.ts"
+
+    node[shape=plaintext,fillcolor=none]
+
+    rq[shape=plaintext,fillcolor=none,label="runQuery
+QueryOptions
+GqlResponse
+Log...
+"]
+  }
+
+  "rq" -> "graphql"[ltail=cluster_runQuery, color=yellow]
+}
