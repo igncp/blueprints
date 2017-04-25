@@ -9,6 +9,6 @@
 
 ### Core structure
 
-![Core](./diagrams/core-structure.svg)
+#### [Core package structure](./diagrams/core-structure.svg)
 
 __legend__: The black nodes are NPM dependencies and the white nodes / clusters are files.
