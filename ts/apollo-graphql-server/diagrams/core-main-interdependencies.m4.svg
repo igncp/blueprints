@@ -23,37 +23,37 @@
 <stop offset="1" style="stop-color:cornsilk;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_1)" stroke="black" points="288.378,-684.92 288.378,-1028.06 1031.04,-1028.06 1031.04,-684.92 288.378,-684.92"/>
+<polygon fill="url(#l_1)" stroke="black" stroke-dasharray="1,5" points="288.378,-684.92 288.378,-1028.06 1031.04,-1028.06 1031.04,-684.92 288.378,-684.92"/>
 <text text-anchor="middle" x="659.708" y="-1012.86" font-family="Times,serif" font-size="14.00">runQuery.ts</text>
 </g>
 <g id="clust2" class="cluster"><title>cluster_interfaces</title>
 <defs>
 <linearGradient id="l_2" gradientUnits="userSpaceOnUse" x1="296.378" y1="-897.505" x2="870.048" y2="-897.505" >
-<stop offset="0" style="stop-color:deepskyblue;stop-opacity:1.;"/>
-<stop offset="1" style="stop-color:lightblue;stop-opacity:1.;"/>
+<stop offset="0" style="stop-color:#d1eeee;stop-opacity:1.;"/>
+<stop offset="1" style="stop-color:deepskyblue;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_2)" stroke="black" points="296.378,-809.326 296.378,-985.683 870.048,-985.683 870.048,-809.326 296.378,-809.326"/>
+<path fill="url(#l_2)" stroke="black" d="M308.378,-809.326C308.378,-809.326 858.048,-809.326 858.048,-809.326 864.048,-809.326 870.048,-815.326 870.048,-821.326 870.048,-821.326 870.048,-973.683 870.048,-973.683 870.048,-979.683 864.048,-985.683 858.048,-985.683 858.048,-985.683 308.378,-985.683 308.378,-985.683 302.378,-985.683 296.378,-979.683 296.378,-973.683 296.378,-973.683 296.378,-821.326 296.378,-821.326 296.378,-815.326 302.378,-809.326 308.378,-809.326"/>
 <text text-anchor="middle" x="583.213" y="-970.483" font-family="Times,serif" font-size="14.00">interfaces</text>
 </g>
 <g id="clust3" class="cluster"><title>cluster_enum</title>
 <defs>
 <linearGradient id="l_3" gradientUnits="userSpaceOnUse" x1="890.048" y1="-803.174" x2="1023.04" y2="-803.174" >
-<stop offset="0" style="stop-color:deepskyblue;stop-opacity:1.;"/>
-<stop offset="1" style="stop-color:lightblue;stop-opacity:1.;"/>
+<stop offset="0" style="stop-color:#d1eeee;stop-opacity:1.;"/>
+<stop offset="1" style="stop-color:deepskyblue;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_3)" stroke="black" points="890.048,-714.996 890.048,-891.353 1023.04,-891.353 1023.04,-714.996 890.048,-714.996"/>
+<path fill="url(#l_3)" stroke="black" d="M902.048,-714.996C902.048,-714.996 1011.04,-714.996 1011.04,-714.996 1017.04,-714.996 1023.04,-720.996 1023.04,-726.996 1023.04,-726.996 1023.04,-879.353 1023.04,-879.353 1023.04,-885.353 1017.04,-891.353 1011.04,-891.353 1011.04,-891.353 902.048,-891.353 902.048,-891.353 896.048,-891.353 890.048,-885.353 890.048,-879.353 890.048,-879.353 890.048,-726.996 890.048,-726.996 890.048,-720.996 896.048,-714.996 902.048,-714.996"/>
 <text text-anchor="middle" x="956.543" y="-876.153" font-family="Times,serif" font-size="14.00">enums</text>
 </g>
 <g id="clust4" class="cluster"><title>cluster_funcs</title>
 <defs>
 <linearGradient id="l_4" gradientUnits="userSpaceOnUse" x1="561.461" y1="-747.123" x2="854.005" y2="-747.123" >
-<stop offset="0" style="stop-color:deepskyblue;stop-opacity:1.;"/>
-<stop offset="1" style="stop-color:lightblue;stop-opacity:1.;"/>
+<stop offset="0" style="stop-color:#d1eeee;stop-opacity:1.;"/>
+<stop offset="1" style="stop-color:deepskyblue;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_4)" stroke="black" points="561.461,-695.857 561.461,-798.389 854.005,-798.389 854.005,-695.857 561.461,-695.857"/>
+<path fill="url(#l_4)" stroke="black" d="M573.461,-695.857C573.461,-695.857 842.005,-695.857 842.005,-695.857 848.005,-695.857 854.005,-701.857 854.005,-707.857 854.005,-707.857 854.005,-786.389 854.005,-786.389 854.005,-792.389 848.005,-798.389 842.005,-798.389 842.005,-798.389 573.461,-798.389 573.461,-798.389 567.461,-798.389 561.461,-792.389 561.461,-786.389 561.461,-786.389 561.461,-707.857 561.461,-707.857 561.461,-701.857 567.461,-695.857 573.461,-695.857"/>
 <text text-anchor="middle" x="707.733" y="-783.189" font-family="Times,serif" font-size="14.00">functions</text>
 </g>
 <g id="clust5" class="cluster"><title>cluster_graphqlOptions</title>
@@ -63,27 +63,27 @@
 <stop offset="1" style="stop-color:cornsilk;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_5)" stroke="black" points="242.882,-404.663 242.882,-673.983 702.961,-673.983 702.961,-404.663 242.882,-404.663"/>
+<polygon fill="url(#l_5)" stroke="black" stroke-dasharray="1,5" points="242.882,-404.663 242.882,-673.983 702.961,-673.983 702.961,-404.663 242.882,-404.663"/>
 <text text-anchor="middle" x="472.922" y="-658.783" font-family="Times,serif" font-size="14.00">graphqlOptions.ts</text>
 </g>
 <g id="clust6" class="cluster"><title>cluster_interfaces2</title>
 <defs>
 <linearGradient id="l_6" gradientUnits="userSpaceOnUse" x1="250.882" y1="-466.866" x2="509.961" y2="-466.866" >
-<stop offset="0" style="stop-color:deepskyblue;stop-opacity:1.;"/>
-<stop offset="1" style="stop-color:lightblue;stop-opacity:1.;"/>
+<stop offset="0" style="stop-color:#d1eeee;stop-opacity:1.;"/>
+<stop offset="1" style="stop-color:deepskyblue;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_6)" stroke="black" points="250.882,-415.6 250.882,-518.133 509.961,-518.133 509.961,-415.6 250.882,-415.6"/>
+<path fill="url(#l_6)" stroke="black" d="M262.882,-415.6C262.882,-415.6 497.961,-415.6 497.961,-415.6 503.961,-415.6 509.961,-421.6 509.961,-427.6 509.961,-427.6 509.961,-506.133 509.961,-506.133 509.961,-512.133 503.961,-518.133 497.961,-518.133 497.961,-518.133 262.882,-518.133 262.882,-518.133 256.882,-518.133 250.882,-512.133 250.882,-506.133 250.882,-506.133 250.882,-427.6 250.882,-427.6 250.882,-421.6 256.882,-415.6 262.882,-415.6"/>
 <text text-anchor="middle" x="380.422" y="-502.933" font-family="Times,serif" font-size="14.00">interfaces</text>
 </g>
 <g id="clust7" class="cluster"><title>cluster_funcs2</title>
 <defs>
 <linearGradient id="l_7" gradientUnits="userSpaceOnUse" x1="281.422" y1="-580.336" x2="694.961" y2="-580.336" >
-<stop offset="0" style="stop-color:deepskyblue;stop-opacity:1.;"/>
-<stop offset="1" style="stop-color:lightblue;stop-opacity:1.;"/>
+<stop offset="0" style="stop-color:#d1eeee;stop-opacity:1.;"/>
+<stop offset="1" style="stop-color:deepskyblue;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_7)" stroke="black" points="281.422,-529.07 281.422,-631.603 694.961,-631.603 694.961,-529.07 281.422,-529.07"/>
+<path fill="url(#l_7)" stroke="black" d="M293.422,-529.07C293.422,-529.07 682.961,-529.07 682.961,-529.07 688.961,-529.07 694.961,-535.07 694.961,-541.07 694.961,-541.07 694.961,-619.603 694.961,-619.603 694.961,-625.603 688.961,-631.603 682.961,-631.603 682.961,-631.603 293.422,-631.603 293.422,-631.603 287.422,-631.603 281.422,-625.603 281.422,-619.603 281.422,-619.603 281.422,-541.07 281.422,-541.07 281.422,-535.07 287.422,-529.07 293.422,-529.07"/>
 <text text-anchor="middle" x="488.191" y="-616.403" font-family="Times,serif" font-size="14.00">functions</text>
 </g>
 <g id="clust8" class="cluster"><title>cluster_http</title>
@@ -93,37 +93,37 @@
 <stop offset="1" style="stop-color:cornsilk;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_8)" stroke="black" points="8,-10.9368 8,-393.726 468.922,-393.726 468.922,-10.9368 8,-10.9368"/>
+<polygon fill="url(#l_8)" stroke="black" stroke-dasharray="1,5" points="8,-10.9368 8,-393.726 468.922,-393.726 468.922,-10.9368 8,-10.9368"/>
 <text text-anchor="middle" x="238.461" y="-378.526" font-family="Times,serif" font-size="14.00">runHTTPQuery.ts</text>
 </g>
 <g id="clust9" class="cluster"><title>cluster_interfaces3</title>
 <defs>
 <linearGradient id="l_9" gradientUnits="userSpaceOnUse" x1="16" y1="-300.08" x2="230.882" y2="-300.08" >
-<stop offset="0" style="stop-color:deepskyblue;stop-opacity:1.;"/>
-<stop offset="1" style="stop-color:lightblue;stop-opacity:1.;"/>
+<stop offset="0" style="stop-color:#d1eeee;stop-opacity:1.;"/>
+<stop offset="1" style="stop-color:deepskyblue;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_9)" stroke="black" points="16,-248.813 16,-351.346 230.882,-351.346 230.882,-248.813 16,-248.813"/>
+<path fill="url(#l_9)" stroke="black" d="M28,-248.813C28,-248.813 218.882,-248.813 218.882,-248.813 224.882,-248.813 230.882,-254.813 230.882,-260.813 230.882,-260.813 230.882,-339.346 230.882,-339.346 230.882,-345.346 224.882,-351.346 218.882,-351.346 218.882,-351.346 28,-351.346 28,-351.346 22,-351.346 16,-345.346 16,-339.346 16,-339.346 16,-260.813 16,-260.813 16,-254.813 22,-248.813 28,-248.813"/>
 <text text-anchor="middle" x="123.441" y="-336.146" font-family="Times,serif" font-size="14.00">interfaces</text>
 </g>
 <g id="clust10" class="cluster"><title>cluster_classes</title>
 <defs>
 <linearGradient id="l_10" gradientUnits="userSpaceOnUse" x1="28.3489" y1="-186.61" x2="218.533" y2="-186.61" >
-<stop offset="0" style="stop-color:deepskyblue;stop-opacity:1.;"/>
-<stop offset="1" style="stop-color:lightblue;stop-opacity:1.;"/>
+<stop offset="0" style="stop-color:#d1eeee;stop-opacity:1.;"/>
+<stop offset="1" style="stop-color:deepskyblue;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_10)" stroke="black" points="28.3489,-135.343 28.3489,-237.876 218.533,-237.876 218.533,-135.343 28.3489,-135.343"/>
+<path fill="url(#l_10)" stroke="black" d="M40.3489,-135.343C40.3489,-135.343 206.533,-135.343 206.533,-135.343 212.533,-135.343 218.533,-141.343 218.533,-147.343 218.533,-147.343 218.533,-225.876 218.533,-225.876 218.533,-231.876 212.533,-237.876 206.533,-237.876 206.533,-237.876 40.3489,-237.876 40.3489,-237.876 34.3489,-237.876 28.3489,-231.876 28.3489,-225.876 28.3489,-225.876 28.3489,-147.343 28.3489,-147.343 28.3489,-141.343 34.3489,-135.343 40.3489,-135.343"/>
 <text text-anchor="middle" x="123.441" y="-222.676" font-family="Times,serif" font-size="14.00">classes</text>
 </g>
 <g id="clust11" class="cluster"><title>cluster_funcs3</title>
 <defs>
 <linearGradient id="l_11" gradientUnits="userSpaceOnUse" x1="51.4412" y1="-73.1401" x2="460.922" y2="-73.1401" >
-<stop offset="0" style="stop-color:deepskyblue;stop-opacity:1.;"/>
-<stop offset="1" style="stop-color:lightblue;stop-opacity:1.;"/>
+<stop offset="0" style="stop-color:#d1eeee;stop-opacity:1.;"/>
+<stop offset="1" style="stop-color:deepskyblue;stop-opacity:1.;"/>
 </linearGradient>
 </defs>
-<polygon fill="url(#l_11)" stroke="black" points="51.4412,-21.8737 51.4412,-124.407 460.922,-124.407 460.922,-21.8737 51.4412,-21.8737"/>
+<path fill="url(#l_11)" stroke="black" d="M63.4412,-21.8737C63.4412,-21.8737 448.922,-21.8737 448.922,-21.8737 454.922,-21.8737 460.922,-27.8737 460.922,-33.8737 460.922,-33.8737 460.922,-112.407 460.922,-112.407 460.922,-118.407 454.922,-124.407 448.922,-124.407 448.922,-124.407 63.4412,-124.407 63.4412,-124.407 57.4412,-124.407 51.4412,-118.407 51.4412,-112.407 51.4412,-112.407 51.4412,-33.8737 51.4412,-33.8737 51.4412,-27.8737 57.4412,-21.8737 63.4412,-21.8737"/>
 <text text-anchor="middle" x="256.181" y="-109.207" font-family="Times,serif" font-size="14.00">functions</text>
 </g>
 <!-- graphql -->

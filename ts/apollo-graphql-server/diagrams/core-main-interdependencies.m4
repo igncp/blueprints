@@ -1,3 +1,9 @@
+define(FILE_COMMON_PROPS, `bgcolor="darkgoldenrod1:cornsilk"
+graph[style=dotted]')
+define(FILE_SECTION_PROPS, `bgcolor="lightcyan2:deepskyblue"
+graph[style=rounded]')
+
+
 digraph {
   rankdir=LR
   bgcolor="deepskyblue:lightblue"
@@ -10,7 +16,7 @@ digraph {
   graphql[fillcolor=black,fontcolor=white,color=black]
 
   subgraph cluster_runQuery {
-    bgcolor="darkgoldenrod1:cornsilk"
+    FILE_COMMON_PROPS
     label="runQuery.ts"
 
     runQuery,doRunQuery[shape=box];
@@ -18,7 +24,7 @@ digraph {
     runQuery -> doRunQuery
 
     subgraph cluster_interfaces {
-      bgcolor="deepskyblue:lightblue"
+      FILE_SECTION_PROPS
       label=interfaces
 
       GqlResponse
@@ -28,7 +34,7 @@ digraph {
     }
 
     subgraph cluster_enum {
-      bgcolor="deepskyblue:lightblue"
+      FILE_SECTION_PROPS
       label=enums
 
       LogStep[fillcolor="chartreuse3:aquamarine2"]
@@ -36,7 +42,7 @@ digraph {
     }
 
     subgraph cluster_funcs {
-      bgcolor="deepskyblue:lightblue"
+      FILE_SECTION_PROPS
       label=functions
 
       runQuery[fillcolor="chartreuse3:aquamarine2"]
@@ -53,18 +59,18 @@ digraph {
 
   subgraph cluster_graphqlOptions {
     label="graphqlOptions.ts"
-    bgcolor="darkgoldenrod1:cornsilk"
+    FILE_COMMON_PROPS
 
     subgraph cluster_interfaces2 {
       label=interfaces
-      bgcolor="deepskyblue:lightblue"
+      FILE_SECTION_PROPS
 
       GraphQLServerOptions[fillcolor="chartreuse3:aquamarine2"]
     }
 
     subgraph cluster_funcs2 {
       label=functions
-      bgcolor="deepskyblue:lightblue"
+      FILE_SECTION_PROPS
 
       resolveGraphqlOptions[fillcolor="chartreuse3:aquamarine2", shape=box]
       isOptionsFunction[shape=box]
@@ -72,25 +78,25 @@ digraph {
   }
 
   subgraph cluster_http {
-    bgcolor="darkgoldenrod1:cornsilk"
+    FILE_COMMON_PROPS
     label="runHTTPQuery.ts"
 
     subgraph cluster_interfaces3 {
-      bgcolor="deepskyblue:lightblue"
+      FILE_SECTION_PROPS
       label=interfaces
 
       HttpQueryRequest[fillcolor="chartreuse3:aquamarine2"]
     }
 
     subgraph cluster_classes {
-      bgcolor="deepskyblue:lightblue"
+      FILE_SECTION_PROPS
       label=classes
 
       HttpQueryError[fillcolor="chartreuse3:aquamarine2"]
     }
 
     subgraph cluster_funcs3 {
-      bgcolor="deepskyblue:lightblue"
+      FILE_SECTION_PROPS
       label=functions
 
       isQueryOperation[shape=box,color=yellow]
