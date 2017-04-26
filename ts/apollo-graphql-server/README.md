@@ -12,3 +12,11 @@
 #### [Core package structure](./diagrams/core-structure.svg)
 
 __legend__: The black nodes are NPM dependencies and the white nodes / clusters are files.
+
+#### [Core main interdependencies](./diagrams/core-main-interdependencies.svg)
+
+__legend__:
+  - Yellow border means private and purple border means public
+  - Green fill means it is exported by `index.ts`. Black one means it is an external dependency.
+  - Squares are functions
+  - Coloured edges don't mean anything (just to facilitate differenciation)

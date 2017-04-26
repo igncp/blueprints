@@ -1,0 +1,113 @@
+digraph {
+  rankdir=LR
+  bgcolor="deepskyblue:lightblue"
+  compound=true
+  label=<<B>Core Main Interdependencies</B>>
+  labelloc=t
+  graph [autosize=false, size="11.8", ratio=1]
+
+  node[color=purple, style=filled,fillcolor=none]
+  graphql[fillcolor=black,fontcolor=white,color=black]
+
+  subgraph cluster_runQuery {
+    bgcolor="darkgoldenrod1:cornsilk"
+    label="runQuery.ts"
+
+    runQuery,doRunQuery[shape=box];
+
+    runQuery -> doRunQuery
+
+    subgraph cluster_interfaces {
+      bgcolor="deepskyblue:lightblue"
+      label=interfaces
+
+      GqlResponse
+      LogMessage[fillcolor="chartreuse3:aquamarine2"]
+      LogFunction[fillcolor="chartreuse3:aquamarine2"]
+      QueryOptions
+    }
+
+    subgraph cluster_enum {
+      bgcolor="deepskyblue:lightblue"
+      label=enums
+
+      LogStep[fillcolor="chartreuse3:aquamarine2"]
+      LogAction[fillcolor="chartreuse3:aquamarine2"]
+    }
+
+    subgraph cluster_funcs {
+      bgcolor="deepskyblue:lightblue"
+      label=functions
+
+      runQuery[fillcolor="chartreuse3:aquamarine2"]
+      doRunQuery[color=yellow]
+    }
+
+    doRunQuery -> LogAction
+    doRunQuery -> LogStep
+    LogMessage -> LogAction
+    LogMessage -> LogStep
+    LogFunction -> LogMessage
+    QueryOptions -> LogFunction
+  }
+
+  subgraph cluster_graphqlOptions {
+    label="graphqlOptions.ts"
+    bgcolor="darkgoldenrod1:cornsilk"
+
+    subgraph cluster_interfaces2 {
+      label=interfaces
+      bgcolor="deepskyblue:lightblue"
+
+      GraphQLServerOptions[fillcolor="chartreuse3:aquamarine2"]
+    }
+
+    subgraph cluster_funcs2 {
+      label=functions
+      bgcolor="deepskyblue:lightblue"
+
+      resolveGraphqlOptions[fillcolor="chartreuse3:aquamarine2", shape=box]
+      isOptionsFunction[shape=box]
+    }
+  }
+
+  subgraph cluster_http {
+    bgcolor="darkgoldenrod1:cornsilk"
+    label="runHTTPQuery.ts"
+
+    subgraph cluster_interfaces3 {
+      bgcolor="deepskyblue:lightblue"
+      label=interfaces
+
+      HttpQueryRequest[fillcolor="chartreuse3:aquamarine2"]
+    }
+
+    subgraph cluster_classes {
+      bgcolor="deepskyblue:lightblue"
+      label=classes
+
+      HttpQueryError[fillcolor="chartreuse3:aquamarine2"]
+    }
+
+    subgraph cluster_funcs3 {
+      bgcolor="deepskyblue:lightblue"
+      label=functions
+
+      isQueryOperation[shape=box,color=yellow]
+      runHTTPQuery[shape=box,fillcolor="chartreuse3:aquamarine2"]
+    }
+
+  }
+
+  GraphQLServerOptions -> LogFunction
+  GraphQLServerOptions -> graphql
+  HttpQueryRequest -> GraphQLServerOptions
+  doRunQuery -> "graphql"
+  isQueryOperation -> graphql
+  runHTTPQuery -> GraphQLServerOptions
+  runHTTPQuery -> graphql
+  runHTTPQuery -> isQueryOperation
+  runHTTPQuery -> resolveGraphqlOptions[color=red]
+  runHTTPQuery -> runQuery[color=yellow]
+  resolveGraphqlOptions -> isOptionsFunction
+}
