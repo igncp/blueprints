@@ -14,7 +14,8 @@ This are the current dependencies in the `package.json`
 
 Additional notes:
 
-- The `README.md` file recommends using `cluster`, which seems from a different vendor, for multi-thread queues.
+- The `README.md` file recommends using `cluster`, which seems from a different vendor, for multi-thread queues
+- A critical dependency is Redis
 
 ## Files Structure
 
@@ -26,5 +27,6 @@ Additional notes:
 
 ## API
 
-- The main require exports a constructor: `Queue` which accepts a string as identifier for the first argument for the constructor, and can accept more arguments.
+- The main require exports a constructor: `Queue` which accepts a string as identifier for the first argument of the constructor, the redis config as the second argument (optional) and a third argument for the queue options
 - `Queue` "inherits" from `EventEmitter` from `events`, so the instances will accept some events like `completed`
+- It is possible to listen to events globally by adding the `global:` prefix
