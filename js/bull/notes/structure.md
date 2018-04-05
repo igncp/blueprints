@@ -24,6 +24,7 @@ Additional notes:
 - In `/lib`: ~2300 LOC of JavaScript and ~300 LOC of Lua
 - The `/support` directory only contains three images and a Sketch file
 - It uses `mocha` + `sinon` for tests, which are in a different directory `/test` than `/lib`
+- All the Lua files are under the `/lib/commands` directory
 
 ## API
 
