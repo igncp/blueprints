@@ -15,8 +15,9 @@
   - It filters the tests to be run
   - Installs Shaka polyfills
   - Sets the Jasmine timeout
-  - Sets the log level from Shaka
+  - Sets the log level in Shaka
   - Handles tests using external resources, drm, and quarantined tests
   - Configures the AMD with some mocks
   - Applies tests delay if necessary
-- In Karma, after the bootstrap file, it loads all the utils files, each adding to the namespace `shaka.test.*`
+- In Karma, after the bootstrap file, it loads all the utils files
+- Each util file adds an entry to the namespace `shaka.test.*`

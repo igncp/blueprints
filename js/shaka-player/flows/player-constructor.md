@@ -1,10 +1,10 @@
 # Player.prototype.load - Shaka Player Flows
 
-# Normal case (very few and similar branches)
+## Normal case (very few and similar branches)
 
 - Inherits from `shaka.util.FakeEventTarget`
-- Sets to null many members: engines, `playhead_`, etc., also empty arrays
-- Also sets some mebers using `this.config_`
+- Sets to `null` many members: engines, `playhead_`, etc. and also sets empty arrays
+- Sets some mebers using values from `this.config_`
 - Creates the `_eventManager`
 - Creates the empty stats
 - Calls the dependency injector (second argument, optional) passing the context
