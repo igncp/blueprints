@@ -2,6 +2,8 @@
 
 This logs are in chronological order from bottom to top:
 
+- Read the `MIGRATION.md` guide which describes the few differences between v2 and v3. Also read the small file `/lib/backoff.js` and the related patterns and tests.
+
 - Tried to generate the same coverage locally. For that it is only necessary to use part of the `coveralls` script. After that added a new test for an uncovered part of the code for cases when passing file path handlers to `queue.progress`.
 
 - Read through `/lib/timer-manager.js` which exposes the `TimerManager` class that uses `setTimeout` and keeps tracks of multiple listeners. The timers or `TimerManager` don't seem to have any tests. Also overread the `/lib/process/child-pool` and `lib/process/sandbox` that are used from the `Queue`.
