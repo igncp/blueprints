@@ -21,3 +21,8 @@
   - Applies tests delay if necessary
 - In Karma, after the bootstrap file, it loads all the utils files
 - Each util file adds an entry to the namespace `shaka.test.*`
+
+## Utils
+
+- The `fakeEventLoop` basically uses to functions `jasmine.clock().tick` and `PromiseMock.flush`
+- In `test/test/util/stream_generator.js` there are many helper functions to generate streams in multiple formats, e.g. `Mp4VodStreamGenerator`

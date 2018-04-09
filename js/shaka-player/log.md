@@ -2,7 +2,9 @@
 
 These entries are in chronological order from bottom to top:
 
-- Created shallow flow notes for the `Player` constructor and `load` method.
+- Added several entries to the glossary, tried to look information for several of the entries. Overread many manuals and specifications for the glossary. ISO provides the DASH spec for free. After adding some of these links to the resources, started writing the flow to setup the unit tests for `StreamingEngine`. After writting both setups for the tests, overread a few unit and integration tests, although will read more after changing the topic. Created a summary of the contents of `build/stats.py` although the actual functionality is complex. Read about source maps to better understand the `stats.py` parsing (e.g. using base64), and added the post to the resources.
+
+- Created shallow flow notes for the `Player` constructor and `load` method. Started overreading the tests for `StreamingEngine`, both unit and integration, comparing with the source, the plan being to select a few of the most important methods and add them to the TODO for creating diagrams, and connecting it to what I know from the `player` module too. I read about the `fakeEventLoop` from the test utils.
 
 - Listed the current externs and Overread the extern generator: `build/generateExterns.js`. Read a few of the current issues, related to the desire to flatten the transition Points data structures in Dash which would be more similar to HLS. Also, overviewed the two projects that are on going at the moment, both refactors of the existing codebase that will facilitate more features. Reviewed a few of the existing users with the tag "Help Wanterd".
 
