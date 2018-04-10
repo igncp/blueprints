@@ -2,7 +2,9 @@
 
 These entries are in chronological order from bottom to top:
 
-- Added several entries to the glossary, tried to look information for several of the entries. Overread many manuals and specifications for the glossary. ISO provides the DASH spec for free. After adding some of these links to the resources, started writing the flow to setup the unit tests for `StreamingEngine`. After writting both setups for the tests, overread a few unit and integration tests, although will read more after changing the topic. Created a summary of the contents of `build/stats.py` although the actual functionality is complex. Read about source maps to better understand the `stats.py` parsing (e.g. using base64), and added the post to the resources.
+- Read about source maps to better understand the `stats.py` parsing (e.g. using base64), and added the post to the resources. Listed the utils files in `lib` and gave a brief description of each one. Also overread the existing polyfills files and the mechanism to register them, listing the files in the `source.md` note. Added a section in the notes to add useful commands to work with the project. Added several TODOs to the flow.
+
+- Added several entries to the glossary, tried to look information for several of the entries. Overread many manuals and specifications for the glossary. ISO provides the DASH spec for free. After adding some of these links to the resources, started writing the flow to setup the unit tests for `StreamingEngine`. After writting both setups for the tests, overread a few unit and integration tests, although will read more after changing the topic. Created a summary of the contents of `build/stats.py` although the actual functionality is complex.
 
 - Created shallow flow notes for the `Player` constructor and `load` method. Started overreading the tests for `StreamingEngine`, both unit and integration, comparing with the source, the plan being to select a few of the most important methods and add them to the TODO for creating diagrams, and connecting it to what I know from the `player` module too. I read about the `fakeEventLoop` from the test utils.
 
