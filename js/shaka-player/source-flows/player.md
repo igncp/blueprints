@@ -4,7 +4,7 @@
 
 ### Basic Success Flow
 
-- Validate that there is a video element
+- Validates that there is a video element
 - Dispatches the `'loading'` event
 - Unloads
 - Cleans the stats
@@ -46,3 +46,12 @@
   - Adds an event listener to `'error'` to the video element
   - Creates the `mediaSourceEngine_`
   - Opens the `mediaSourceEngine_`
+
+## Player.prototype.trickPlay
+
+- Passes the rate (number) to the playhead using `setPlaybackRate`. Rate === 1 would mean normal play
+  - The playhead just passes the rate to the video wrapper created by the playhead
+    - The video wrapper sets the `playbackRate` of the video element. Common browsers only support positive playbackRate
+    - It also sets up a timer repeated every 0.25 s if the rate is negative (backwards) which is faked
+- Passes if there is trick play to the `streamingEngine`
+  - The `streamingEngine` will validate that there are video streams that support trickplay (otherwiser will not do anything)

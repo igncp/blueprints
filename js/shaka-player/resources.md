@@ -14,3 +14,5 @@
 ## Other
 
 - Source Maps Introduction: https://blogs.msdn.microsoft.com/davidni/2016/03/14/source-maps-under-the-hood-vlq-base64-and-yoda/
+- Many MP4 command line applications: https://www.bento4.com/
+  - A special mention to: https://www.bento4.com/documentation/mp4info/

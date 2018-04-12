@@ -2,7 +2,7 @@
 
 These entries are in chronological order from bottom to top:
 
-- Created several flows from the TODOs. Also took a look on the unit tests for the main functions of the flows.
+- Created several flows from the TODOs. Also took a look on the unit tests for the main functions of the flows. Added an entry to the glossary.
 
 - Read about source maps to better understand the `stats.py` parsing (e.g. using base64), and added the post to the resources. Listed the utils files in `lib` and gave a brief description of each one. Also overread the existing polyfills files and the mechanism to register them, listing the files in the `source.md` note. Added a section in the notes to add useful commands to work with the project. Added several TODOs to the flow.
 
