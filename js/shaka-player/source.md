@@ -3,6 +3,8 @@
 - The code is already using `async/await`
 - Most of the playback logic is defined under `shaka.media.*`
 - One common pattern is wrapping existing HTML5 APIs and operations in Promises
+- Both the HLS and the Dash parsers implement `shakaExtern.ManifestParser`
+- In the HLS parser, even if in the spec they don't exist, internally it creates period to comply with the interface
 
 ## lib/player.js
 

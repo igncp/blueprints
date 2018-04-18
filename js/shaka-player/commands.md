@@ -1,6 +1,6 @@
 # Shaka Player Commands
 
-These commands may not be specific to Shaka Player but they are useful while reviewing this projects:
+These commands may not be specific to Shaka Player but they are useful while reviewing this project:
 
 - Display public methods:
 

@@ -37,7 +37,7 @@
 
 - Inherits from `shaka.util.FakeEventTarget`
 - Sets to `null` many members: engines, `playhead_`, etc. and also sets empty arrays
-- Sets some mebers using values from `this.config_`
+- Sets some members using values from `this.config_`
 - Creates the `_eventManager`
 - Creates the empty stats
 - Calls the dependency injector (second argument, optional) passing the context
@@ -53,5 +53,37 @@
   - The playhead just passes the rate to the video wrapper created by the playhead
     - The video wrapper sets the `playbackRate` of the video element. Common browsers only support positive playbackRate
     - It also sets up a timer repeated every 0.25 s if the rate is negative (backwards) which is faked
-- Passes if there is trick play to the `streamingEngine`
-  - The `streamingEngine` will validate that there are video streams that support trickplay (otherwiser will not do anything)
+- Passes to the `streamingEngine` a value of if there is trick play 
+  - The `streamingEngine` will validate that there are video streams that support trick play (otherwise will not do anything)
+
+## Player.prototype.onKeyStatus_
+
+### Context
+
+- Callers:
+  - shaka.media.DrmEngine.prototype.processKeyStatusChanges_
+    - shaka.media.DrmEngine constructor [via shaka.util.Timer]
+- Callees:
+  - this.streamingEngine_.getCurrentPeriod
+  - this.streamingEngine_.getActiveAudio
+  - this.streamingEngine_.getActiveVideo
+  - shaka.util.StreamUtils.getVariantByStreams
+  - this.chooseStreamsAndSwitch_
+  - this.onTracksChanged_
+  - shaka.util.StreamUtils.filterVariantsByLanguageAndRole
+  - this.abrManager_.setVariants
+
+### Flow
+
+- Validates that the DRM engine has been configured
+- Validates that it has been passed key statuses
+- Validates that there is not only one synthetic key status
+- Loops through the variants to:
+  - Set the `allowedByKeySystem` property in each of the variants
+  - Check if the tracks changed in any of the variants
+- Gets the active variant
+- Checks if the active variant is allowed by the key system
+  - If not, switches streams
+- If the tracks changed (which was checked in the loop):
+  - Calls on track changed
+  - Sets the variants in the `abrManager_`
