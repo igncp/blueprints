@@ -15,3 +15,8 @@
   - [ ] Media Source Engine Flush: `lib/media/media_source_engine.js#flush`
   - [ ] Streaming Engine Handle Period Transition: `lib/media/streaming_engine.js#handlePeriodTransition_`
   - [ ] Streaming Engine Switch Internal: `lib/media/streaming_engine.js#switchInternal_`
+
+- Stacks
+  - [x] shaka.media.Playhead.prototype.setStartTime
+
+  - [ ] shaka.net.Backoff.prototype.attempt

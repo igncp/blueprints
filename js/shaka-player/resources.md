@@ -2,6 +2,7 @@
 
 ## Domain
 
+- EME blog post: https://www.html5rocks.com/en/tutorials/eme/basics/
 - Technical DASH and MPEG-2 TS Slides: https://www.slideshare.net/agiladi/alex-giladi-dashtsr3
 - MPEG-DASH Information PDF: https://www.dvb.org/resources/public/standards/a168_dvb_mpeg-dash_nov_2017.pdf
 - Media Source W3 Spec: https://www.w3.org/TR/media-source
