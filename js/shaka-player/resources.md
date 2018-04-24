@@ -7,6 +7,8 @@
 - MPEG-DASH Information PDF: https://www.dvb.org/resources/public/standards/a168_dvb_mpeg-dash_nov_2017.pdf
 - Media Source W3 Spec: https://www.w3.org/TR/media-source
 - Common File Formats and Media Formats Spec: https://uvcentral.com/sites/default/files/files/PublicSpecs/CFFMediaFormat-2_1.pdf
+- Great presentation and examples: https://github.com/nickdesaulniers/netfix
+- Posts (4) about building an HTML player: https://www.wirewax.com/blog/post/building-a-media-source-html5-player
 
 ## Stack
 
