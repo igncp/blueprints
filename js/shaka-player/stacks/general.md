@@ -29,3 +29,17 @@
 This was useful to understand the `Backoff` service, which allows handling errors with retries in a way that avoids cycles of rapid retries, which can sometimes be bad for server loads. It is interesting the implementation of the fuzz function.
 
 It was surprising how many times the `scheduleUpdate_` is called within the streaming engine. Also interesting that it is possible to pass a streaming failure callback to the config. The backoff system is also used in the networking engine.
+
+## shaka.media.Transmuxer.prototype.transmux
+
+- shaka.media.StreamingEngine.prototype.scheduleUpdate_ (/many in this file)
+- shaka.media.StreamingEngine.prototype.onUpdate_
+- shaka.media.StreamingEngine.prototype.update_ (/1)
+- shaka.media.StreamingEngine.prototype.update_ (/1)
+- shaka.media.StreamingEngine.prototype.fetchAndAppend_ (/1)
+- shaka.media.StreamingEngine.prototype.initSourceBuffer_ (/2)
+- shaka.media.MediaSourceEngine.prototype.appendBuffer (/2)
+- **shaka.media.Transmuxer.prototype.transmux** (/1)
+- muxjs.mp4.Transmuxer.prototype.flush (/1)
+
+Learnt how the MediaSourceEngine contains a map from content type to transmuxers, so many transmuxers can be initialized at the same time. Also the MediaSourceEngine uses the `buffer` property of the result (the `ArrayBuffer` which holds the binary data) to append the data to the source buffer.

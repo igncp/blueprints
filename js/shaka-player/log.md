@@ -2,7 +2,7 @@
 
 These entries are in chronological order from bottom to top:
 
-- Restructured the glossary. Before adding a flow and stack, searched for both types to add in the `todo.md`. Added flow for media source engine flush and stack for backoff attempt.
+- Restructured the glossary. Before adding a flow and stack, searched for both types to add in the `todo.md`. Added flow for media source engine flush and stack for backoff attempt. It was a while since reviewing the project, first of all searched for new todos. After, when starting a transmuxer flow, learned more about `Uint8Array`, `DataView` and `ArrayBuffer`, which are closely related. Also read about `mux.js` which is from VideoJS.
 
 - Created several flows from the TODOs. Also took a look at the unit tests for the main functions of the flows. Added an entry to the glossary. Created one stack and continued with the flows. Added a few stacks to the todo list. Also started to include the number of occurrences in the stacks. Started to review some of the opened and closed GitHub issues and learn about the labels. The reading helped to add some new glossary words. Learnt about `HTMLMediaElement.readyState`. Created a document to review merged PRs and closed issues. Also, read a post about EME extending the glossary.
 

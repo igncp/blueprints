@@ -13,6 +13,7 @@
 ## Stack
 
 - Jasmine Docs: https://jasmine.github.io/2.0/introduction.html
+- MuxJS: https://github.com/videojs/mux.js/
 
 ## Other
 
