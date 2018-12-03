@@ -1,0 +1,14 @@
+LOG
+
+- [Read]: First section of tutorial: https://github.com/leandromoreira/ffmpeg-libav-tutorial#learn-ffmpeg-libav-the-hard-way
+- [Overread]: Repo tutorial about ffmpeg: https://github.com/leandromoreira/ffmpeg-libav-tutorial#learn-ffmpeg-libav-the-hard-way
+- [Infra]: Pull the official Docker image
+- [Metrics]: Most defines in repository
+- [Overread]: Some implementation files from the libraries (e.g. libavutils)
+- [Read]: Wiki tutorial about Audio Channels
+- [Overread]: ffmpeg manual page
+- [Write][Test]: Basic repository details
+- [Overread]: Beginning of https://ffmpeg.org/ffmpeg.htm
+- [Clone]: https://github.com/FFmpeg/FFmpeg
+- [Write][Test]: News Page from Website
+- [Write][Test]: About Page from Website

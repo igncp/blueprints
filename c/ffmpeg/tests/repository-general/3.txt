@@ -1,0 +1,32 @@
+3. What are the top-level directories of the repository?
+
+The 17 items are:
+
++ 7 commented libraries:
+
+- libavcodec
+- libavdevice
+- libavfilter
+- libavformat
+- libavutil
+- libswresample
+- libswscale
+
++ 2 extra libraries:
+
+- libavresample
+- libpostproc: post-process
+
++ usuals directories:
+
+- .git
+- tests
+- doc
+
+5 extra directories:
+
+- compat: files for specific platforms (like Windows or Solaris)
+- ffbuild
+- fftools
+- presets: it contains files like libvpx-*.ffpreset
+- tools

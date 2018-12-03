@@ -1,0 +1,13 @@
+5. What are the most important items ignored by Git from the top-level?
+
+Then 9 items are:
+
+- *.d: some of these files are included but presumably they were added manually
+- *.dll
+- *.exe
+- *.o
+- *.so
+- *_g
+- /ffmpeg
+- /ffplay
+- /ffprobe

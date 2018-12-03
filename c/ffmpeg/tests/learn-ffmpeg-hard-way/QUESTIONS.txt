@@ -1,0 +1,9 @@
+1. Name the audio and video codecs used in the first example
+
+2. What is the first operation in the Hello World example
+
+3. What are the functions defined in the Hello World example and their
+purpose.
+
+4. What libraries, structs, compiler variables, and functions (name total
+number and 5 function names) from av library are involved in the Hello World example.

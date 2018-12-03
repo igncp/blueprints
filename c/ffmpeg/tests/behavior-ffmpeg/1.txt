@@ -1,0 +1,19 @@
+1. What is the default behavior for stream selection?
+
+By default, ffmpeg includes only one stream of each type (video, audio,
+subtitle) present in the input files and adds them to each output file.  It
+picks the "best" of each based upon the following criteria:
+
+- video: highest resolution
+- audio: with most channels
+- subtitles: the first subtitle stream
+
+Where several streams of the same type rate equally, the stream with the lowest
+index. For full manual control, use the "-map" option, which disables the
+defaults.
+
+---
+
+References:
+
+- `man ffmpeg`

@@ -1,0 +1,9 @@
+2. List the tools that ffmpeg provide (not libraries) and describe each of them
+
+The tools are:
+
+- ffmpeg: A command line tool to convert files between formats
+- ffplay: A simple media player based on SDL and FFmpeg libraries
+- ffprobe: A simple multimedia stream analyzer
+
+[From GitHub's README] Additional small tools such as: aviocat, ismindex and qt-faststart

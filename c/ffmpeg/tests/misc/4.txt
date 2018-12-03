@@ -1,0 +1,13 @@
+4. List the components listed in the Components Documentation
+
+There are nine items
+
+- Utilities
+- Video scaling and pixel format converter
+- Audio resampler
+- Encoders and decoders (codecs)
+- Bitstream filters
+- Muxers and demuxers (formats)
+- Protocols
+- Input and output devices
+- Filters

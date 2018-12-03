@@ -1,0 +1,7 @@
+1. How long (time) is the repository and who is the main maintainer?
+
+Running `git summary` on the GitHub mirror returns `18 years` at the time of
+writting this answer
+
+The major contributor is Michael Niedermayer with around 30% of the
+contributions

@@ -1,0 +1,10 @@
+2. What is the first operation in the Hello World example
+
+It allocates memory creating a new AVFormatContext, defined in
+libavformat/avformat.h. For that it calls a specific function:
+avformat_alloc_context which is implemented in libavformat/options.c
+
+This function creates a new context and assings memory and defaults values to
+it, freeing it if anything fails
+
+Some of the types involved: AVClass, AVFormatContext

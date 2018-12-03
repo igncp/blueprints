@@ -1,0 +1,13 @@
+3. List the sections listed in the Command Line Tools documentation
+
+There are nine items:
+
+- ffmpeg: ffmpeg tool
+- ffmpeg-all: ffmpeg tool and FFmpeg components
+- ffplay: ffplay tool
+- ffplay-all: ffplay tool and FFmpeg components
+- ffprobe: ffprobe tool
+- ffprobe-all: ffprobe tool and FFmpeg components
+- ffserver: ffserver tool
+- ffserver-all: ffserver tool and FFmpeg components
+- sample ffserver configuration file

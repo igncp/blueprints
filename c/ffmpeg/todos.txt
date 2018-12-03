@@ -1,0 +1,6 @@
+Ideas:
+
+- Read and create tests and summaries for: https://ffmpeg.org/developer.html#Contributing
+- Read and organize mailing list with contributions: https://ffmpeg.org/contact.html#MailingLists
+- Create exercises with reports with sample streams
+- Read the components documentation

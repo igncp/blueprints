@@ -1,0 +1,9 @@
+4. What are the metrics (files and LoC) for main languages in repo?
+
+For the five main types of files:
+
+- C: 2500 files, 1.200.000 LoC
+- D: 2000 files, 30.000 LoC
+- C Header: 900 files, 200.000 LoC
+- Assembly: 150 files, 100.000 LoC
+- Makefile: 50 files, 5.000 LoC

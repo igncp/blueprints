@@ -1,0 +1,4 @@
+1. Does ffmpeg have good suport for many platforms?
+
+Yes, ffmpeg is highly portabe. It supports Linux, Mac OS Windows. It runs the
+FATE tests suite to maitain this support. http://fate.ffmpeg.org/

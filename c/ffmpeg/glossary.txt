@@ -1,0 +1,34 @@
+Glossary
+
+Done:
+
+- *.so extension: (Shared Object) Shared library files for C and C++. They are linked during the runtime [repo/.gitignore]
+- Bitrate: Metric, number of bits that are conveyed or processed per unit of time. For streams, it ranges between 500 - 8000 kbps [L-02]
+- FATE: FFmpeg Automated Testing Environment
+- Filtergraph: Directed graph of connected filters. It can contain cycles, and there can be multiple links between a pair of filters. Sequence of filterchains. A filter with no input pads is called a "source", and a filter with no output pads is called a "sink". [L-02]
+- SDL: Simple DirectMedia Library. https://www.libsdl.org/ [L-01]
+- vpath: A utility in Makefile to specify location of dependencies. https://www.cmcrossroads.com/article/basics-vpath-and-vpath [Makefile]
+
+Doing:
+
+To-do:
+
+- *.mak extension: [repo/tests/fate/ffmpeg.mak]
+- Audio channel: [L-04]
+- Audio rematrixing: [L-01]
+- Audio resampling: [L-01]
+- Bitstream Filter: [L-03]
+- Demuxer: [L-01]
+- Frame Rate: [L-02]
+- Media filters: [L-01]
+- Muxer: [L-01]
+- Polyphase Filter: [L-02]
+
+Locations:
+
+- L-01: About Page in Website
+- L-02: https://ffmpeg.org/ffmpeg.html
+- L-03: https://ffmpeg.org/documentation.html
+- L-04: `man ffmpeg`
+
+References:

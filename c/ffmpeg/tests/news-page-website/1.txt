@@ -1,0 +1,3 @@
+1. What is the latest release (tracked in Blueprints)?
+
+New Major release 4.1 version released on 06/11/2018

@@ -1,0 +1,13 @@
+3: List the libraries that ffmpeg provide and describe each of them
+
+The 7 libraries are:
+
+- libavutil: for simplifying programming, (random number generators, data structures, mathematics routines, ...)
+- libavcodec: decoders and encoders for audio/video codecs
+- libavformat: demuxers and muxers for multimedia container formats
+- libavdevice: input and output devices for grabbing from and rendering to many common multimedia input/output software frameworks
+- libavfilter: media filters.
+- libswscale: highly optimized image scaling and color space/pixel format conversion operations
+- libswresample: highly optimized audio resampling, rematrixing and sample format conversion operations
+
+5 of them have the av prefix and 2 sw

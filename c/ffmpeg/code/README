@@ -1,0 +1,58 @@
+CODE
+
+fftools/ffmpeg.h typedefs:
+
+- FilterGraph
+- HWAccel
+- HWDevice
+- InputFile
+- InputFilter
+- InputStream
+- OptionsContext
+- OutputFile
+- OutputFilter
+- OutputStream
+- StreamMap
+
+There is an examples directory in : `docs/examples`
+
+The files involved in the `ffmpeg` command line options parsing are:
+
+- `fftools/ffmpeg.h`
+- `fftools/ffmpeg.c`
+- `fftools/ffmpeg_opt.c`: used only by ffmpeg
+- `fftools/cmdutils.h`: used by ffplay, ffprobe
+- `fftools/cmdutils.c`
+
+A ranking of files with most defines is:
+
+- config.h:2475
+- libavutil/mips/generic_macros_msa.h:468
+- libavcodec/avcodec.h:287
+- libavformat/matroska.h:197
+- libavutil/intreadwrite.h:126
+- libavformat/avformat.h:82
+- libavutil/x86/cpu.h:81
+- libavutil/pixfmt.h:75
+- libavutil/x86/asm.h:69
+- libavcodec/alpha/asm.h:69
+- libavcodec/x86/fdct.c:67
+- libavcodec/mpegutils.h:67
+- libavutil/mips/mmiutils.h:64
+- libavformat/iff.c:56
+- libswscale/swscale_internal.h:55
+- libavutil/channel_layout.h:55
+- libavutil/internal.h:54
+- libavcodec/vp9dsp_template.c:54
+- libavformat/rtmpdh.c:53
+- libavcodec/ac3.h:53
+- libswscale/swscale_unscaled.c:52
+- libavutil/ppc/util_altivec.h:52
+- libavcodec/dct32_template.c:50
+- libpostproc/postprocess_template.c:48
+- libavcodec/aac_defines.h:48
+- libavformat/asfenc.c:47
+- libavutil/common.h:45
+- libavcodec/bit_depth_template.c:45
+- libavcodec/mpegvideo.h:44
+- fftools/ffprobe.c:44

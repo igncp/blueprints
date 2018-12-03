@@ -1,0 +1,6 @@
+2. Where is the ffmpeg CLI tool located in the repository?
+
+There is not a specific file, but the logic seems to be located in the
+directory: ./fftools/*
+
+This directory also holds other tools like ffprobe and ffplay

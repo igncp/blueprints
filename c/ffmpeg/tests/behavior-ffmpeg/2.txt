@@ -1,0 +1,17 @@
+2. In the manual, what types of options are listed for ffmpeg?
+
+There are the following 10 options:
+
+- Advanced options
+
+- Advanced Audio options
+- Advanced Subtitle options
+- Advanced Video options
+
+- Generic options
+- Main options
+- AVOptions
+
+- Audio Options
+- Subtitle options
+- Video Options

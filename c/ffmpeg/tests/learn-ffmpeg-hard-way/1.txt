@@ -1,0 +1,4 @@
+1. Name the audio and video codecs used in the first example
+
+- Audio: AAC - Advanced Audio Codec. It is a sucessor of the MP3
+- Video: H264 (Or Advanced Video Codec) is a video compression standard

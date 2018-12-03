@@ -1,0 +1,4 @@
+SDL:
+
+- The only Makefile where this is used is: libavdevice/Makefile: libavdevice/sdl2.c
+- It imports: <SDL.h> and <SDL_thread.h>

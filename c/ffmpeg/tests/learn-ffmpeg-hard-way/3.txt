@@ -1,0 +1,7 @@
+3. What are the defined functions defined in the Hello World example and their purpose.
+
+Including `main`, there are 4 items:
+
+- logging: custom log function to stderr
+- decode_packet: transforms a packet into frames
+- save_gray_frame: saves a frame (8 in total) into an image

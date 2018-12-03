@@ -1,0 +1,9 @@
+1. Describe in a simple diagram the process of ffmpeg
+
+From: http://ffmpeg.tv/diagram.png
+
+Input File -> (demuxer) -> \
+Encoded Data Packages -> (decoder) -> \
+Decoded Frames -> (encoder) -> \
+Encoded Data Packages -> (muxer) -> \
+Output File

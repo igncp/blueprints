@@ -1,0 +1,5 @@
+1. Does ffmpeg have good suport for many platforms?
+
+2. List the tools that ffmpeg provide (not libraries) and describe each of them
+
+3: List the libraries that ffmpeg provide and describe each of them

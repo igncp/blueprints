@@ -1,0 +1,13 @@
+Infra
+
+Installation (Arch Linux):
+
+- Install yasm: `sudo pacman -S --no-confirm yasm`
+- `./configure`: fast script. It will output the supported features
+- `make`: This will output many files. Takes several minutes (around 15)
+
+The `make` command will create bin files at the top-level. It will also create
+files with `_g` suffix (e.g. `ffmpeg_g`) which contain debug symbols.
+
+Building a custom script:
+- `gcc -g -Wall -lavformat -lavcodec -lswscale -lavutil -lz SCRIPT_PATH.c`

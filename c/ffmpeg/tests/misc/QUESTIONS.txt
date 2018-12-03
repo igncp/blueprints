@@ -1,0 +1,7 @@
+1. Describe in a simple diagram the process of ffmpeg
+
+2. How is the documentation organized
+
+3. List the sections listed in the Command Line Tools documentation
+
+4. List the components listed in the Components Documentation

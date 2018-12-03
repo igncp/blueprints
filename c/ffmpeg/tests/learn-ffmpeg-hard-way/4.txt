@@ -1,0 +1,55 @@
+4. What libraries, structs, compiler variables, and functions (name total
+number and 5 names) from av library are involved in the Hello World example.
+
+There are 2 libraries:
+
+- libavcodec: libavcodec/avcodec.h
+- libavformat: libavformat/avformat.h
+
+There are 6 structs:
+
+- AVFormatContext
+- AVCodecContext
+
+- AVCodec
+- AVCodecParameters
+
+- AVPacket
+- AVFrame
+
+There are 21 functions (name whatever 5):
+
+- av_err2str
+- av_get_picture_type_char
+
+- av_frame_alloc
+- av_frame_free
+- av_frame_unref
+- av_read_frame
+
+- av_packet_alloc
+- av_packet_free
+- av_packet_unref
+
+- avcodec_alloc_context3
+- avcodec_find_decoder
+- avcodec_free_context
+- avcodec_open2
+- avcodec_parameters_to_context
+- avcodec_receive_frame
+- avcodec_send_packet
+
+- avformat_alloc_context
+- avformat_close_input
+- avformat_find_stream_info
+- avformat_free_context
+- avformat_open_input
+
+Note there are three prefixes: `av` (`av_frame` and `av_packet` are repeated), `avcodec` and `avformat`.
+
+There are four compiler variables:
+
+- AVERROR
+- AVERROR_EOF
+- AVMEDIA_TYPE_AUDIO
+- AVMEDIA_TYPE_VIDEO

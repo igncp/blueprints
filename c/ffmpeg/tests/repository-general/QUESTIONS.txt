@@ -1,0 +1,9 @@
+1. How long (time) is the repository and who is the main maintainer?
+
+2. Where is the ffmpeg CLI tool located in the repository?
+
+3. What are the top-level directories of the repository?
+
+4. What are the metrics (files and LoC) for main languages in repo?
+
+5. What are the most important items ignored by Git from the top-level?
