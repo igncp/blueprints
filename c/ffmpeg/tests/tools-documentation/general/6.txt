@@ -1,0 +1,20 @@
+6. Name 5 options that can display the available items for that option in the command line
+
+There are 16 options:
+
+- -formats: Show available formats (including devices).
+- -demuxers: Show available demuxers.
+- -muxers: Show available muxers.
+- -devices: Show available devices.
+- -codecs: Show all codecs known to libavcodec.
+- -decoders: Show available decoders.
+- -encoders: Show all available encoders.
+- -bsfs: Show available bitstream filters.
+- -protocols: Show available protocols.
+- -filters: Show available libavfilter filters.
+- -pix_fmts: Show available pixel formats.
+- -sample_fmts: Show available sample formats.
+- -layouts: Show channel names and standard channel layouts.
+- -colors: Show recognized color names.
+- -sources device[,opt1=val1[,opt2=val2]...]: Show autodetected sources of the input device
+- -sinks device[,opt1=val1[,opt2=val2]...]: Show autodetected sinks of the output device.

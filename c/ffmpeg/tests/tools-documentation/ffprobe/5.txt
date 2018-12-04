@@ -1,0 +1,10 @@
+5. Name all possible writers
+
+There are 6 different writers:
+
+- default
+- compact, csv
+- flat
+- ini
+- json
+- xml

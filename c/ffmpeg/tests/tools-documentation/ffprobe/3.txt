@@ -1,0 +1,27 @@
+3. How to run ffprobe on a specific interval
+
+Must use the option: `-read_intervals read_intervals`
+
+For several, can separate with comma. Each interval is specified by two optional parts, separated by "%".
+
+The first part specifies the interval start position. It is interpreted as an absolute position, or as a relative offset from the current position if it is preceded by the "+" character. If this first part is not specified, no seeking will be performed when reading this interval.
+
+The second part specifies the interval end position. It is interpreted as an absolute position, or as a relative offset from the current position if it is preceded by the "+" character. If the offset specification starts with "#", it is interpreted as the number of packets to read (not including the flushing packets) from the interval start. If no second part is specified, the program will read until the end of the input.
+
+Examples (directly from the docs):
+
++ Seek to time 10, read packets until 20 seconds after the found seek point, then seek to position 01:30 (1 minute and thirty seconds) and read packets until position 01:45.
+
+10%+20,01:30%01:45
+
++ Read only 42 packets after seeking to position 01:23:
+
+01:23%+#42
+
++ Read only the first 20 seconds from the start:
+
+%+20
+
++ Read from the start until position 02:30:
+
+%02:30

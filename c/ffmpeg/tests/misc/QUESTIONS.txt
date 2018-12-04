@@ -5,3 +5,5 @@
 3. List the sections listed in the Command Line Tools documentation
 
 4. List the components listed in the Components Documentation
+
+5. Describe the Opus codec

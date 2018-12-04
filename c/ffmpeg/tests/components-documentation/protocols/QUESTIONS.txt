@@ -1,0 +1,7 @@
+1. What are the ways to setup protocols options.
+
+2. How to list the supported protocols using the command line.
+
+3. What are protocols and which ones are enabled by default.
+
+4. With what protocol can live streaming have seeking capabilities.

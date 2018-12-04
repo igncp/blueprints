@@ -1,0 +1,5 @@
+2. How are the boolean options handled.
+
+- They do not take arguments
+- They set the corresponding value to true
+- They can be set to false by prefixing the option name with "no": e.g. `-nofoo` and `foo`

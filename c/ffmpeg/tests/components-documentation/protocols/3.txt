@@ -1,0 +1,7 @@
+3. What are protocols and which ones are enabled by default.
+
+They are configured elements in FFmpeg that enable access to resources that require specific protocols.
+
+All the supported protocols are enabled by default
+
+Ref: https://ffmpeg.org/ffmpeg-protocols.html#Protocol-Options

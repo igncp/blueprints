@@ -1,0 +1,8 @@
+1. What are the supported symbols in the numeric options.
+
+- They accept a string representing a number as input
+- They can be followed by SI unit prefixes: e.g. ’K’, ’M’, or ’G’
+- If 'i' is after the SI unit, it uses binary multiples (powers of 1024 instead of 1000)
+- Using 'B' after the SI unit multiplies the value by 8
+
+Some examples: ’KB’, ’MiB’, ’G’ and ’B’ as number suffixes.

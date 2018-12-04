@@ -1,0 +1,5 @@
+3. How to create a stream specifier that matches all the audio streams
+
+Without adding an index.
+
+For example, the stream specifier in -b:a 128k matches all audio streams.

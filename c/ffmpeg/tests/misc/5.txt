@@ -1,0 +1,7 @@
+5. Describe the Opus codec
+
+- Opus is a lossy audio coding format developed by the Xiph.Org Foundation and standardized by the Internet Engineering Task Force (IETF)
+- Several blind listening tests have ranked it higher-quality than any other standard audio format at any given bitrate until transparency is reached, including MP3, AAC, and HE-AAC
+- Its delay is exceptionally low compared to competing codecs
+- As an open format standardized through RFC, a reference implementation called libopus is available under the New BSD License
+- The GitHub repo: https://github.com/xiph/opus

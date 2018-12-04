@@ -1,0 +1,11 @@
+1. Name 5 options that ffprobe has with prefix show*
+
+2. How to write ffprobe output to JSON format
+
+3. How to run ffprobe on a specific interval
+
+4. How to provide options to a writer
+
+5. Name all supported possible writers
+
+6. What is the video stream property "colorspace" (or "color_space")

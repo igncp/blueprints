@@ -1,0 +1,15 @@
+6. What is the video stream property "colorspace" (or "color_space")
+
+Describes how you display an array of pixel values on screen
+
+- It tells us what type of color components exist within the array of pixels (e.g. RGB or YUV), and how to translate the pixel values in each color component to photons on the screen.
+- Whether the signal (assuming YUV) is full-range or restricted range
+- The transformation matrix between YUV and RGB
+
+Examples of values:
+
+- Bt-601 (“Standard-definition” or SD)
+- Bt-709 (“High-definition” or HD)
+- Bt-2020 (“Ultra-high-definition” or UHD)
+
+Ref: https://trac.ffmpeg.org/wiki/colorspace

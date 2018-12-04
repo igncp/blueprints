@@ -1,0 +1,3 @@
+4. With what protocol can live streaming have seeking capabilities.
+
+With the `cache` input protocol. It caches the stream to a temporary file.

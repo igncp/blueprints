@@ -1,0 +1,9 @@
+1. What are the ways to setup protocols options.
+
+There are three ways:
+
+- specifying -option value in the FFmpeg tools
+- setting the value explicitly in the AVFormatContext options
+- using the libavutil/opt.h API for programmatic use
+
+Ref: https://ffmpeg.org/ffmpeg-protocols.html#Protocol-Options

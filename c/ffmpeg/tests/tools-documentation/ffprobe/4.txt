@@ -1,0 +1,6 @@
+4. How to provide options to a writer
+
+When specifying the writer (using the -print_format or -of), you can pass
+options separated by : in the form of key value. For example:
+
+ffprobe -of json=a=1:b=2 VIDEO.mkv

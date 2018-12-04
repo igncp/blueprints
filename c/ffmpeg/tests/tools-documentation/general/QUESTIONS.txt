@@ -1,0 +1,11 @@
+1. What are the supported symbols in the numeric options.
+
+2. How are the boolean options handled.
+
+3. How to create a stream specifier that matches all the audio streams
+
+4. Is the following a valid stream specifier: -codec: copy
+
+5. Name 3 ways of specifying a stream
+
+6. Name 5 options that can display the available items for that option in the command line

@@ -1,0 +1,7 @@
+2. How to write ffprobe output to JSON format
+
+By specifying `-print_format` or `-of` (same) to `json`
+
+For example:
+
+ffprobe -show_streams -of json video.mkv

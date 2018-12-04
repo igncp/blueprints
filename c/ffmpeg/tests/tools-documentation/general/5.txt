@@ -1,0 +1,10 @@
+5. Name 3 ways of specifying a stream
+
+There are 6 ways:
+
+- stream_index
+- stream_type[:stream_index]: is one of following: ’v’ or ’V’ for video, ’a’ for audio, ’s’ for subtitle, ’d’ for data, and ’t’ for attachments. ’v’ matches all video streams, ’V’ only matches video streams which are not attached pictures, video thumbnails or cover arts.
+- p:program_id[:stream_index] or p:program_id[:stream_type[:stream_index]] or p:program_id:m:key[:value] In
+- #stream_id or i:stream_id Match the stream by stream id (e.g. PID in MPEG-TS container).
+- m:key[:value]: Matches streams with the metadata tag key having the specified value. If value is not given, matches streams that contain the given tag with any value.
+- u: Matches streams with usable configuration

@@ -1,0 +1,3 @@
+2. How to list the supported protocols using the command line.
+
+You must type the command: `ffmpeg -protocols`
