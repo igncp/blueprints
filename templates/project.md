@@ -42,8 +42,9 @@ Important files / directories:
 - Resources: links, documentation, etc
 - Infrastructure
 - Source / test
-- Todo
+- Todo: include doubts here till big enough
 - Setup: scripts, Dockerfiles, etc.
+- Memorization: tests, questions
 
 Ideas
 
