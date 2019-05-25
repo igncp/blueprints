@@ -38,11 +38,13 @@ Important files / directories:
 
 - Glossary
 - Flows
+- Stacks: Easy to build but bring less value than flows
+- Answers: Completed doubts from `Todo`
 - Reviews of issues / prs
 - Resources: links, documentation, etc
 - Infrastructure
 - Source / test
-- Todo: include doubts here till big enough
+- Todo: include doubts here till big enough. Include unit and frequent tasks. Include goals.
 - Setup: scripts, Dockerfiles, etc.
 - Memorization: tests, questions
 
