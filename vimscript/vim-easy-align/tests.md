@@ -6,3 +6,20 @@ directory with the setup of the tests and a `run` file to start the runner.
 
 The `run` script is just opening Vim in a similar fashion as the `.travis.yml`
 file.
+
+Tree:
+
+```
+ ├── blockwise.vader
+ ├── commandline.vader
+ ├── extra.vader
+ ├── fixed.vader
+ ├── fixme.vader
+ ├── include
+ │   ├── setup.vader
+ │   └── teardown.vader
+ ├── interactive.vader
+ ├── README.md
+ ├── run
+ └── tex.vader
+```

@@ -2,7 +2,13 @@
 
 set -e
 
-mkdir -p ~/.vim/bundle ~/.vim/autoload
+mkdir -p ~/.vim/bundle/vim-tests/plugin ~/.vim/autoload
+
+cat >> ~/.vim/bundle/vim-tests/plugin/vim_tests.vim <<"EOF"
+function! vim_tests#main()
+  echo "foo"
+endfunction
+EOF
 
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
@@ -10,21 +16,27 @@ git clone https://github.com/junegunn/vim-easy-align.git ~/.vim/bundle/vim-easy-
 
 ln -s "/home/ubuntu/.vim/bundle/vim-easy-align" ~/vim-easy-align
 
-cd ~/.vim/bundle/vim-easy-align
+curl -O https://raw.githubusercontent.com/igncp/environment/master/arch-linux/provision/vim-base.sh
 
-git reset --hard 12dd631
+sh vim-base.sh
 
-git clone https://github.com/junegunn/vader.vim.git
-git clone https://github.com/tpope/vim-repeat
+rm -rf vim-base.sh
 
-cat >> ~/.vimrc_normal <<"EOF"
+cat >> ~/.vimrc <<"EOF"
 execute pathogen#infect()
 filetype plugin indent on
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 EOF
 
-cp ~/.vimrc_normal ~/.vimrc
+cp ~/.vimrc ~/.vimrc_normal
+
+cd ~/.vim/bundle/vim-easy-align
+
+git reset --hard 12dd631
+
+git clone https://github.com/junegunn/vader.vim.git
+git clone https://github.com/tpope/vim-repeat
 
 cat >> ~/.vimrc_test <<"EOF"
 filetype off

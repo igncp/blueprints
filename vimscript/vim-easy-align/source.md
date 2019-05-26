@@ -19,7 +19,6 @@ Functions list:
 - s:build_mode_sequence
 - s:ceil2
 - s:compact_options
-- s:do_align
 - s:echon
 - s:echon_
 - s:ignored_syntax
@@ -30,36 +29,42 @@ Functions list:
 - s:parse_filter
 - s:parse_nth
 - s:process
-- s:shift
 - s:shift_opts
-- s:strwidth
 - s:test_regexp
 - s:trim
 - s:update_lines
 
 - **s:atoi**: Converts a string into an integer if it looks like a number
-- **s:build_dict**: Called only from `s:process`, constructs the 'application state' with some defaults
+- **s:build_dict**: Called only from `s:process`, constructs the 'application
+  state' with some defaults
+- **s:do_align**: One of the most extense and complex functions. It receives
+  the lines to align and iterates them.
 - **s:exit**: Echoes a `ErrorMsg` with a message and throws exit
 - **s:floor2**: Called only from `s:do_align`, it returns the passed number if
   multiple of 2 or decreases by one
-- **s:fuzzy_lu**: Used by `s:normalize_options`. Tries to retrieve a key from the `s:known_options` map.
-- **s:highlighted_as**: Retrieves information about the syntax (`:h synIDattr`) to
-  check the name. Returns either `0` if not using the expected syntax or `1`
+- **s:fuzzy_lu**: Used by `s:normalize_options`. Tries to retrieve a key from
+  the `s:known_options` map.
+- **s:highlighted_as**: Retrieves information about the syntax (`:h synIDattr`)
+  to check the name. Returns either `0` if not using the expected syntax or `1`
   otherwise. Uses regex comparisons matching the case (`:h !~#`)
-- **s:input**: Function to accept input from the user (`:h input`), called in many
-  places. It handles the redraw (`:h redraw`) in a different way depending if
-  in visual mode
+- **s:input**: Function to accept input from the user (`:h input`), called in
+  many places. It handles the redraw (`:h redraw`) in a different way depending
+  if in visual mode
 - **s:ltrim**: Called from several places, performs a left-trim
 - **s:parse_shorthand_opts**: Called only from `s:parse_args`, it parses the
   shorthand notation by using the `s:shorthand_regex`
 - **s:rtrim**: Trim in the right
-- **s:split_line**: Called only from `s:do_align`, is a relatively long and complex
-  function (with many arguments). It returns a list of tokens and a list of
-  delimeters.
+- **s:shift**: removes the first item (if not the only item) in a list. If the
+  cycle option is passed, it appends it to the end of the list
+- **s:split_line**: Called only from `s:do_align`, is a relatively long and
+  complex function (with many arguments). It returns a list of tokens and a
+  list of delimeters.
+- **s:strwidth**: It maps to `strdisplaywidth` if exists. See `:h
+  strdisplaywidth`
 - **s:validate_options**: Loops the passed options and confirms the have the
   correct type (`:help type`). Called by `s:normalize_options`
-- **s:valid_regexp**: It returns either `1` is regex is valid (does not throw on an
-  empty string) or `0` if invalid
+- **s:valid_regexp**: It returns either `1` is regex is valid (does not throw
+  on an empty string) or `0` if invalid
 
 Important variables list:
 
@@ -73,3 +78,17 @@ Important variables list:
 - s:option_values 
 - s:shorthand 
 - s:shorthand_regex
+
+Important arguments types / meaning
+
+- `s:split_line`:
+    1. line: String, I think the full line
+    1. nth: Number
+    1. modes: In this context, it is a string in the form `"[lrc...][[*]*]"` (l: left, r: right, c: center)
+    1. cycle: Boolean
+    1. fc: Number, First Column
+    1. lc: Number, Last Column
+    1. pattern: String (Regex). The `:h \/magic` behavour of regex is important to know here
+    1. stick_to_left: Boolean
+    1. ignore_unmatched: Boolean
+    1. ignore_groups: Boolean

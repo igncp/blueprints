@@ -43,7 +43,7 @@ Important files / directories:
 - Reviews of issues / prs
 - Resources: links, documentation, etc
 - Infrastructure
-- Source / test
+- Source / test: Includes list with explanation of functions, classes, arguments, etc.
 - Todo: include doubts here till big enough. Include unit and frequent tasks. Include goals.
 - Setup: scripts, Dockerfiles, etc.
 - Memorization: tests, questions
