@@ -81,6 +81,16 @@ Important variables list:
 
 Important arguments types / meaning
 
+- `s:process`:
+    1. range
+    1. mode: One of 'r' | 'l' | 'c'. Not sure if also includes '*' and '**'
+    1. n: String , I think it refers to the nth character to align (e.g. 1, 2, '*', '**')
+    1. ch: String, it is the delimiter key (one of the keys of `s:easy_align_delimiters_default`)
+    1. opts
+    1. regexp
+    1. rules: dict that normally is `s:easy_align_delimiters_default` or an extension from it
+    1. bvi
+
 - `s:split_line`:
     1. line: String, I think the full line
     1. nth: Number
