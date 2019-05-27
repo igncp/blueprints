@@ -5,7 +5,6 @@
 - Investigate the two failing tests in the setup
 - Flows of the main / complex source functions [requires understanding arguments]:
     - `s:interactive`
-    - `s:process`
     - `s:parse_args`
     - `s:do_align`
 - List of all the functions in autoload with explanations

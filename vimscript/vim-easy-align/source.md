@@ -17,8 +17,6 @@ Functions list:
 - s:align
 - s:alternating_modes
 - s:build_mode_sequence
-- s:ceil2
-- s:compact_options
 - s:echon
 - s:echon_
 - s:ignored_syntax
@@ -28,7 +26,6 @@ Functions list:
 - s:parse_args
 - s:parse_filter
 - s:parse_nth
-- s:process
 - s:shift_opts
 - s:test_regexp
 - s:trim
@@ -37,6 +34,8 @@ Functions list:
 - **s:atoi**: Converts a string into an integer if it looks like a number
 - **s:build_dict**: Called only from `s:process`, constructs the 'application
   state' with some defaults
+- **s:ceil2**: Increases one if odd
+- **s:compact_options**: Uses `s:shorthand` (dictionary with shorter version of the options keys)
 - **s:do_align**: One of the most extense and complex functions. It receives
   the lines to align and iterates them.
 - **s:exit**: Echoes a `ErrorMsg` with a message and throws exit
@@ -53,6 +52,8 @@ Functions list:
 - **s:ltrim**: Called from several places, performs a left-trim
 - **s:parse_shorthand_opts**: Called only from `s:parse_args`, it parses the
   shorthand notation by using the `s:shorthand_regex`
+- **s:process**: Is in charge of preparing the options and calling `s:do_align`
+  to build the lines changes
 - **s:rtrim**: Trim in the right
 - **s:shift**: removes the first item (if not the only item) in a list. If the
   cycle option is passed, it appends it to the end of the list
@@ -68,28 +69,29 @@ Functions list:
 
 Important variables list:
 
-- g:easy_align_last_command 
+- g:easy_align_last_command
 - g:loaded_easy_align
-- s:cpo_save 
-- s:easy_align_delimiters_default 
-- s:known_options 
-- s:live 
-- s:mode_labels 
-- s:option_values 
-- s:shorthand 
+- s:cpo_save
+- s:easy_align_delimiters_default
+- s:known_options
+- s:live
+- s:mode_labels
+- s:option_values
+- s:shorthand
 - s:shorthand_regex
 
 Important arguments types / meaning
 
 - `s:process`:
-    1. range
+    1. range: a tuple containing the first line and the last line numbers
     1. mode: One of 'r' | 'l' | 'c'. Not sure if also includes '*' and '**'
     1. n: String , I think it refers to the nth character to align (e.g. 1, 2, '*', '**')
     1. ch: String, it is the delimiter key (one of the keys of `s:easy_align_delimiters_default`)
-    1. opts
-    1. regexp
+    1. opts: a dict being a subset of `s:known_options`
+    1. regexp: Seems boolean in this context, indicating if regexp present
     1. rules: dict that normally is `s:easy_align_delimiters_default` or an extension from it
-    1. bvi
+    1. bvi: Boolean, true if block type visual mode (`:h visualmode()`) in
+       opposition to line-type or character type
 
 - `s:split_line`:
     1. line: String, I think the full line

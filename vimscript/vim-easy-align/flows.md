@@ -28,3 +28,13 @@ Relatively small function
 1. Handles the case where the last token is a delimiter
 1. Handles the indentation case
 1. Handles the line is a comment case
+
+### High Level `./autoload/easy_align.vim@s:process`
+
+1. Parses the n character to align
+1. Builds the configuration
+1. Builds the arguments for `s:do_align`
+1. Calls `s:do_align`, generating the context of the lines to update
+1. Returns the information of the lines to update with some metadata (to save last command)
+
+Note that the real lines are not yet updated, will be updated later using the `.todo` result
