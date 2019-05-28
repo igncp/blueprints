@@ -9,7 +9,8 @@
     - `s:do_align`
 - List of all the functions in autoload with explanations
 - List of the important variables in autoload with explanations
-- Create fixtures in the setup to learn the different alingment options: https://github.com/junegunn/vim-easy-align#list-of-options
+- Create fixtures in the setup to learn the different alignment options:
+  https://github.com/junegunn/vim-easy-align#list-of-options
 - Retrieve the meaning of some of the arguments (in source.md)
 
 ## Frequent

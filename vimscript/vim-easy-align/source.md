@@ -17,8 +17,6 @@ Functions list:
 - s:align
 - s:alternating_modes
 - s:build_mode_sequence
-- s:echon
-- s:echon_
 - s:ignored_syntax
 - s:interactive
 - s:interactive_modes
@@ -28,16 +26,22 @@ Functions list:
 - s:parse_nth
 - s:shift_opts
 - s:test_regexp
-- s:trim
 - s:update_lines
 
 - **s:atoi**: Converts a string into an integer if it looks like a number
 - **s:build_dict**: Called only from `s:process`, constructs the 'application
   state' with some defaults
 - **s:ceil2**: Increases one if odd
-- **s:compact_options**: Uses `s:shorthand` (dictionary with shorter version of the options keys)
+- **s:compact_options**: Uses `s:shorthand` (dictionary with shorter version of
+  the options keys)
 - **s:do_align**: One of the most extense and complex functions. It receives
   the lines to align and iterates them.
+- **s:echon**: Prepares to call `s:echon_` with some metadata like the mode.
+  Can print warning. Returns the list of values (mapping the tokens list). It
+  is used for saving the last command.
+- **s:echon_**: Receives a list of lists, where each list specifies the color
+  and message. Loops these tokens printing them in fullscreen. This is only
+  called from `s:echon` and `s:exit`. `:h echohl`.
 - **s:exit**: Echoes a `ErrorMsg` with a message and throws exit
 - **s:floor2**: Called only from `s:do_align`, it returns the passed number if
   multiple of 2 or decreases by one
@@ -60,8 +64,11 @@ Functions list:
 - **s:split_line**: Called only from `s:do_align`, is a relatively long and
   complex function (with many arguments). It returns a list of tokens and a
   list of delimeters.
-- **s:strwidth**: It maps to `strdisplaywidth` if exists. See `:h
-  strdisplaywidth`
+- **s:strwidth**: It maps to `strdisplaywidth` if exists. See `:h strdisplaywidth`
+- **s:summarize**: It compacts the passed options with a special case for `'a'`
+  (align) and it returns them. The result is used to save the last command
+  (using `s:echon`).
+- **s:trim**: Removes spaces both at the right and left of the line
 - **s:validate_options**: Loops the passed options and confirms the have the
   correct type (`:help type`). Called by `s:normalize_options`
 - **s:valid_regexp**: It returns either `1` is regex is valid (does not throw
@@ -80,7 +87,19 @@ Important variables list:
 - s:shorthand
 - s:shorthand_regex
 
-Important arguments types / meaning
+# Arguments
+
+Important arguments types / meaning:
+
+- `s:interactive`:
+    1. range:
+    1. modes:
+    1. n:
+    1. d:
+    1. opts:
+    1. rules:
+    1. vis:
+    1. bvis:
 
 - `s:process`:
     1. range: a tuple containing the first line and the last line numbers
