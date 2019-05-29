@@ -29,6 +29,7 @@
     - Set goals
     - Set scope
     - Contribute
+    - Alternate difficult (doubts - answers, flows, fn definitions) with easier (reading, setup) tasks
 - Keep the todo (remaining, in progress) up to date
     - Add reasoning if necessary
 
@@ -44,7 +45,10 @@ Important files / directories:
 - Resources: links, documentation, etc
 - Infrastructure
 - Source / test: Includes list with explanation of functions, classes, arguments, etc.
-- Todo: include doubts here till big enough. Include unit and frequent tasks. Include goals.
+- Todo: include doubts here till big enough.
+    - Include unit and frequent tasks
+    - Include goals
+    - Include questions (empty list is a bad sign)
 - Setup: scripts, Dockerfiles, etc.
 - Memorization: tests, questions
 

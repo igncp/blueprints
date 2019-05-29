@@ -23,11 +23,8 @@
 
 ## Doubts
 
-- What is the `g:easy_align_last_command` variable used for
-- In what format is the last command saved
 - What are bang interactive modes used for
-- If I want to align by one custom delimeter (e.g. `a`) how to do it
-- What is `ignore_groups` refering to in the source
+- What do the different types of indentation (`'d'`, `'s'`, `'n'`, `'k'`) mean
 
 ## Goals
 

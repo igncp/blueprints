@@ -23,3 +23,7 @@ Tree:
  ├── run
  └── tex.vader
 ```
+
+The only two tests failing in the Docker environment are in the `vixme.vader`
+file, which seems to imply that they are expected failures, although only 2 of
+4 are failing.
