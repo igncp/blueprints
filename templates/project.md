@@ -26,10 +26,13 @@
     - Setting up infrastructure
 - Performance / Motivation
     - Schedule
+    - Use breaks and rest periods in advantage: revisit topics after a few days
     - Set goals
     - Set scope
     - Contribute
-    - Alternate difficult (doubts - answers, flows, fn definitions) with easier (reading, setup) tasks
+    - Alternate difficulty:
+        - Difficult: answers, flows, fn definitions, summaries
+        - Easy: doubts, reading, stats, setup
 - Keep the todo (remaining, in progress) up to date
     - Add reasoning if necessary
 
@@ -44,13 +47,18 @@ Important files / directories:
 - Reviews of issues / prs
 - Resources: links, documentation, etc
 - Infrastructure
-- Source / test: Includes list with explanation of functions, classes, arguments, etc.
-- Todo: include doubts here till big enough.
-    - Include unit and frequent tasks
+- Source: Includes list with explanation of functions, classes, arguments, etc.
+- Tests: Can be new tests (verified), the structure, or comments about specific tests
+- Todo:
+    - Include once-time-only and periodic tasks
     - Include goals
     - Include questions (empty list is a bad sign)
+    - Import doubts from [the generic list](./doubts.md) if necessary
 - Setup: scripts, Dockerfiles, etc.
 - Memorization: tests, questions
+- Examples: Can be comments about existing examples or new examples (they need to be run and verified)
+    - Use the Tests document when possible which are a better type of example
+    (when tests passing) than documentation examples
 
 Ideas
 

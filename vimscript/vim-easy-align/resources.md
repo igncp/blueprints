@@ -15,3 +15,4 @@
     - https://vim.fandom.com/wiki/Simplifying_regular_expressions_using_magic_and_no-magic
     - `:h \/magic`
 - Difference between `function` and `function!`: `:h E124`
+- `unlet` command: `:h unlet`

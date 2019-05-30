@@ -13,18 +13,24 @@
   https://github.com/junegunn/vim-easy-align#list-of-options
 - Retrieve the meaning of some of the arguments (in source.md)
 
-## Frequent
+## Periodic
 
 - Revisit docs: Main README.md, EXAMPLES.md, easy_align.txt
 - Use fixtures to test as many features
     - Add `echo` commands through the code to debug
 - Flows and Stacks
 - Revisit notes: Refactor, fix, study
+- Write summaries
+- Import doubts or create custom ones
 
 ## Doubts
 
 - What are bang interactive modes used for
 - What do the different types of indentation (`'d'`, `'s'`, `'n'`, `'k'`) mean
+- What does the system need to change to remove the live mode
+- How does it detect what is a string (e.g. when `ig["String"]`). Does it
+  consider backtick? Is it the same for every language?
+- What areas would change to remove the right-align option in the modes
 
 ## Goals
 

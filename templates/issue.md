@@ -7,3 +7,21 @@
 - Strategy summary: Include ideas and alternatives
 - Summary of the researched information
 - Post-refactors list with estimations
+
+## Template
+
+```
+# ISSUE NAME
+
+## TODO
+
+## Description
+
+## Reason to fix
+
+## Current knowledge and assumptions
+
+## Strategies to solve
+
+## Post-refactors with estimations
+```

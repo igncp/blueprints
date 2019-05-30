@@ -77,15 +77,19 @@ Functions list:
 Important variables list:
 
 - g:easy_align_last_command
-- g:loaded_easy_align
+- g:loaded_easy_align: Flag to avoid loading the script more than once
 - s:cpo_save
 - s:easy_align_delimiters_default
-- s:known_options
+- s:known_options: A dict of the available options (long version) as keys
+  pointing to lists containing the available types. The types in vimscript are
+  numbers.
 - s:live
-- s:mode_labels
+- s:mode_labels: A dict of modes (`l`, `r` and `c`) pointing to how it is
+  displayed in the command (e.g. `l` as `''` or `r` as `[R]`)
 - s:option_values
-- s:shorthand
-- s:shorthand_regex
+- s:shorthand: A dict with the long version of the keys for some options
+  pointing to the short version, usually a couple of letters
+- s:shorthand_regex: A long regex to extract shorthand options from an expression
 
 # Arguments
 
