@@ -46,9 +46,10 @@ Important files / directories:
 - Answers: Completed doubts from `Todo`
 - Reviews of issues / prs
 - Resources: links, documentation, etc
-- Infrastructure
+- Infrastructure / Tooling
 - Source: Includes list with explanation of functions, classes, arguments, etc.
 - Tests: Can be new tests (verified), the structure, or comments about specific tests
+- Unstructured: Some notes that may be moved or removed in the future
 - Todo:
     - Include once-time-only and periodic tasks
     - Include goals
@@ -65,4 +66,7 @@ Ideas
 - Summaries: Strictly derived from notes
 - Context: Reasoning for the project or the internal parts
 
-Start in a single file, then branch out into multiple files / directories
+Workflow
+
+- Start in two files (todo.md and REAMDE.md), then split into multiple files / directories
+- Never let the todo list / doubts list to grow too much
