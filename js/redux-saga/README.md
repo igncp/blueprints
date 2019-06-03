@@ -16,6 +16,11 @@
 - Gitter: https://gitter.im/yelouafi/redux-saga
 
 - TS + Redux Saga: https://github.com/Lemoncode/redux-sagas-typescript-by-example
+- Difference between `spawn` and `fork` effects: https://stackoverflow.com/questions/43259301/whats-the-difference-between-fork-and-spawn-in-redux-saga
+- Good UI: https://goodui.org/
+- Undo example: https://redux-saga.js.org/docs/recipes#undo
+    - Uses `race(...)` effect
+    - Uses `take` with a predicate
 
 ## Structure
 
@@ -91,6 +96,29 @@ definition files:
 ./packages/types/index.d.ts
 ```
 
+### Types Tress
+
+#### Core - runSaga
+
+- Saga
+    - IterableIterator
+- RunSagaOptions
+    - PredicateTakeableChannel
+        - Predicate: Function returning boolean
+    - SagaMonitor: Dispatches monitoring events
+    - ErrorInfo: An object containing the stack trace string
+    - EffectMiddleware: Function
+- Parameters: https://github.com/Microsoft/TypeScript/blob/v3.3.1/lib/lib.es5.d.ts#L1474
+- Task:
+    - Partial: https://github.com/Microsoft/TypeScript/blob/v3.3.1/lib/lib.es5.d.ts#L1424
+
+#### Core - SagaMiddleware
+
+- Middleware: From `redux`
+- Task
+- Saga
+- Parameters, Partial
+
 ## Tooling
 
 The project seems to be using:
@@ -102,14 +130,19 @@ The project seems to be using:
 
 ## Unstructured
 
-In the first example of the GitBook they show the exposed API methods: `call`,
-`put`, `takeEvery`, `takeLatest` (all from `'redux-saga/effects'`). They choose
-to use Generators over promises / (async / await) due to the features they
-provide like cancellation, and they expect to continue using them.
+2nd read of guides: Now I can understand better the purpose of the exposed
+effects. The `take*` family will be similar to manually checking for the action
+type in a redux middleware to run some functionality.
 
-There is a concept of `rootSaga` (similar to `rootReducer`). The way to use it
-is `sagaMiddleware.run(rootSaga)`. There are some examples of tests for sagas
-where it uses the native syntax for generators: `.next()`.
+ES6 generators don't support yielding promises out-of-the-box, but when used in
+Sagas it seems it is possible. However, it is possible to use `try/catch`
+blocks with `yield` instructions inside.
+
+`call` can be used with generators and promises. The library exposes a `cancel`
+effect that can be used with tasks (the return value of a `fork` effect) to
+cancel it.
+
+---
 
 The `takeEvery` function is one of the most common one and explained in the
 beginning of the concepts docs. The docs uses the terminology: `task`,
