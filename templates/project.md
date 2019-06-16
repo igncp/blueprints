@@ -69,4 +69,5 @@ Ideas
 Workflow
 
 - Start in two files (todo.md and REAMDE.md), then split into multiple files / directories
-- Never let the todo list / doubts list to grow too much
+- Never let the todo list / doubts list to grow too much or be empty
+- Never let the Unstructured Content grow too much (can be empty)
