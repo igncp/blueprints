@@ -13,6 +13,10 @@
 - Resources List: https://github.com/aleron75/mageres
 - Tutorials: https://firebearstudio.com/blog/the-ultimate-magento-2-tutorial.html
 - Required Stack: https://devdocs.magento.com/guides/v2.3/install-gde/system-requirements-tech.html
+- Vendors docs:
+    - Symfony: https://symfony.com/doc/current/index.html#gsc.tab=0
+    - Composer: https://getcomposer.org/doc/
+    - Zend: https://framework.zend.com/learn
 
 ## Source
 
@@ -45,7 +49,7 @@ Top-level directories:
 - bin: Contains the `bin/magento` script which uses PHP
 - dev: Contains tests, tools and travis config
 - generated: it only contains an `.htaccess` file, like `var`
-- lib: Contains some third party libraries
+- lib: Contains some third party libraries and the Magento framework
 - phpserver
 - pub
 - setup
@@ -58,13 +62,15 @@ The project is using Grunt for the JS side. The biggest directories are, in orde
 
 The repository contains a root `index.php` which is the application entry point. The core framework (more abstract / meta functionality) is defined in `lib`, and the different sections are defined in `app`. Many directories inside `app` and `lib` contain a `README.md` file.
 
-Seems the project uses the [Zend](https://framework.zend.com/) framework.
+Seems the project uses the [Zend framework](https://framework.zend.com/).
 
 The technical guidelines for PHP sections: https://devdocs.magento.com/guides/v2.3/coding-standards/technical-guidelines.html . It describes some coding principles followed in the codebase (e.g. SOLID).
 
 ## Tests
 
-The project uses PHPUnit for some tests.
+The project uses PHPUnit for some tests. It also has its own framework that seems to use PhantomJS: MFTF.
+
+To run unit tests: `php ./vendor/phpunit/phpunit/phpunit -c dev/tests/unit/phpunit.xml.dist`. The Symlink in `./vendor/bin/phpunit` is not working.
 
 ## Flows
 

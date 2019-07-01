@@ -45,7 +45,7 @@ Important files / directories:
 - Stacks: Easy to build but bring less value than flows
 - Answers: Completed doubts from `Todo`
 - Reviews of issues / prs
-- Resources: links, documentation, etc
+- Resources: links, documentation, etc. Include vendors docs.
 - Infrastructure / Tooling
 - Source: Includes list with explanation of functions, classes, arguments, etc.
 - Tests: Can be new tests (verified), the structure, or comments about specific tests
@@ -56,6 +56,9 @@ Important files / directories:
     - Include questions (empty list is a bad sign)
     - Import doubts from [the generic list](./doubts.md) if necessary
 - Setup: scripts, Dockerfiles, etc.
+    - Add a README.md if necessary
+    - Add custom installers (manual and automatic) with instructions
+    - If any file needs to be added manually, also add instructions and links
 - Memorization: tests, questions
 - Examples: Can be comments about existing examples or new examples (they need to be run and verified)
     - Use the Tests document when possible which are a better type of example
