@@ -12,6 +12,7 @@
     - Issues: check the "Good first issue", "Easy", etc.
     - Pull Requests
     - Stack Overflow, Slack, Mailing
+    - Jira, issue trackers
 - Documentation Sources
 - Misc
     - Project length
