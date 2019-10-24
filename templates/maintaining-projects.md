@@ -10,15 +10,19 @@ These actions need to be made proactively:
     - Easy issues to delegate
 - Understand the system:
     - Take notes of the system to get new perspectives
+    - Consider different levels (top, bottom) and perspectives
     - Review previous notes
     - Use other templates for this
-- Write tests to check important behaviours of system:
+- Write tests to check important behaviours of a system:
     - Refactor to make sections easier to test
 - Add linter rules to make source code more consistent
 - Dependencies:
-    - Can create POCs inside the repo
+    - Can create POCs inside the repo (smallest and simplest the better)
+    - For popular dependencies, review "Awesome" (and similar) lists
+        - Start reviewing the topics titles
     - Upgrade dependencies
     - Study new useful dependencies and technologies
+        - Additionally to POCs, try template applications
     - Study alternatives for current dependencies and technologies
     - Study extensions (plugins) for current dependencies and technologies
     - Improve your understanding of current dependencies and technologies
