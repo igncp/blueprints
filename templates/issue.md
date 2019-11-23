@@ -15,9 +15,13 @@ With steps to replicate
 
 ## Current knowledge and assumptions
 
-## Discoveries Log
+- Why is the issue happening
 
 ## Strategies to solve
 
-## Post-refactors with estimations
+## Discoveries Log
+
+## Post-refactors with estimations if long
+
+## Ways to prevent same issue in this or different projects
 ```

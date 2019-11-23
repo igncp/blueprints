@@ -15,6 +15,9 @@ These actions need to be made proactively:
     - Use other templates for this
 - Write tests to check important behaviours of a system:
     - Refactor to make sections easier to test
+    - Create test helpers (without increasing complexity)
+    - Create new tests
+    - Write specifications of new possible tests and test helpers
 - Add linter rules to make source code more consistent
 - Dependencies:
     - Can create POCs inside the repo (smallest and simplest the better)
