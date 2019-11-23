@@ -13,6 +13,10 @@ With steps to replicate
 
 ## Reason to fix
 
+## Setup steps for most efficient work
+
+- How to debug quickly the whole flow
+
 ## Current knowledge and assumptions
 
 - Why is the issue happening
