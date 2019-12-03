@@ -31,5 +31,6 @@ These actions need to be made proactively:
 - Look for most impact with least effort, or more enabling effort
 - Improve docs of existing API:
     - Try to stick with the main entry points (e.g. repo's README.md)
-    - Add basic info even if supposed known to lower barrier
+    - Add basic info even if supposed to known to lower barrier
+    - Add easy-to-see lists of steps when practical (not changing often) for common flows
     - Add cheatsheets, editors plugins, tutorials references, etc.
