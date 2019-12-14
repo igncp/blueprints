@@ -12,7 +12,7 @@ These actions need to be made proactively:
     - Take notes of the system to get new perspectives
     - Consider different levels (top, bottom) and perspectives
     - Review previous notes
-    - Use other templates for this
+    - Use other templates for this (like './project-understanding.md')
 - Write tests to check important behaviours of a system:
     - Refactor to make sections easier to test
 - Add linter rules to make source code more consistent
@@ -20,7 +20,7 @@ These actions need to be made proactively:
     - Can create POCs inside the repo (smallest and simplest the better)
     - For popular dependencies, review "Awesome" (and similar) lists
         - Start reviewing the topics titles
-    - Upgrade dependencies
+    - Upgrade dependencies: `npm outdated`
     - Study new useful dependencies and technologies
         - Additionally to POCs, try template applications
     - Study alternatives for current dependencies and technologies
