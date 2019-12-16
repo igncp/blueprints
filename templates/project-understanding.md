@@ -34,12 +34,12 @@
     - Alternate difficulty:
         - Difficult: answers, flows, fn definitions, summaries
         - Easy: doubts, reading, stats, setup
-- Keep the todo (remaining, in progress) up to date
+- Keep the TODO (remaining, in progress) up to date
     - Add reasoning if necessary
 
 # Structure
 
-Important files / directories:
+Important sections (or files / directories):
 
 - Glossary
 - Flows
@@ -64,6 +64,9 @@ Important files / directories:
 - Examples: Can be comments about existing examples or new examples (they need to be run and verified)
     - Use the Tests document when possible which are a better type of example
     (when tests passing) than documentation examples
+- Essays:
+    - Articles that summarize the understanding about one topic. Can be revisited / updated in future.
+    - Ideally with creation date and edited date
 
 Ideas
 
