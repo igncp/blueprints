@@ -42,14 +42,16 @@
 - In the `cmake` configuration there is a list of paths to extract rime data:
     - `/usr/share/rime-data` exists in my setup, however, in my previous experience it uses `~/.config/ibus/rime/` which is not listed there
 
+## Doubts
+
+- What is the flow when ibus is enabled and a user types something in the keyboard
+- How is the font size configuration applied in rime UI
+- There are a few files with the `.in` extension but I don't know what is the reason
+- Why some functions defined in `rime_engine.c` (below `functions prototype` comment) seem not implemented or used
+    - On the commit when adding these functions, they were used by referencing them into one engine, but seems they are unused now
+    - Maybe for backwards compatibility?
+    - Many of them are implemented and used, howver found `ibus_rime_engine_cursor_down` which not
+
 ## Links
 
 - [Repo](https://github.com/rime/ibus-rime)
-- [IBus Arch docs](https://wiki.archlinux.org/title/IBus)
-- [IBus repo](https://github.com/ibus/ibus)
-- [IBus wiki](https://github.com/ibus/ibus/wiki/ReadMe)
-    - [Reference](https://ibus.github.io/docs/ibus-1.5/ch01.html)
-
-## Doubts
-
-- There are a few files with the `.in` extension but I don't know what is the reason

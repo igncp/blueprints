@@ -6,6 +6,7 @@
     - [./ibus-rime.md](./ibus-rime.md)
     - [./librime.md](./librime.md)
     - [./plum.md](./plum.md)
+    - [./ibus.md](./ibus.md)
 
 - One important third-party dependency is [`OpenCC`](https://github.com/BYVoid/OpenCC) (Open Chinese Connect) which allows transforming between simplified and traditional characters.
 
