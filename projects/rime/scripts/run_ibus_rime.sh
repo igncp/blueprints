@@ -3,8 +3,14 @@
 set -e
 
 cat > /tmp/ibus_rime_debug.sh <<"EOF"
-make ibus-engine-rime
+#!/bin/bash
 
+set -e
+
+(cd librime && make release)
+(cd librime && sudo make install)
+
+make ibus-engine-rime
 sudo make install
 
 killall ibus-daemon || true

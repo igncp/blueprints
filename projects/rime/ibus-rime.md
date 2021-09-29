@@ -90,6 +90,7 @@
         - This is registered by `librime/src/rime/gear/gears_module.cc` to be used by the Switcher
         - It uses the `librime` registry class, which uses the singleton pattern and only exposes one instance
         - In the `gears` module there are a few types of items registered: filters, processors, segmentors, translators, and formatters
+        - The `Switcher` class has the concept of command, that I am guessing is one of the rows
     - The util to change between half-width and full-width characters is in: `librime/src/rime/gear/punctuator.cc`
         - The `Punctuator` main class inherits from the `Processor` class, however the `Simplifier` class inhertis the `Filter` class
         - The `Processor` class is just in a header file and doesn't have an implementation

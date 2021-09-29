@@ -78,6 +78,11 @@ librime/src/rime/algo
 
 - What are the main modules of the library?
 
+- [ ] What is the difference between a static build (`make librime-static`) and a normal one (`make release`)?
+    - There are several different parameters, the most important seems to be: `-DBUILD_STATIC=ON`
+    - Inside `CMakeLists.txt` the option description is `"Build with dependencies as static libraries"`
+    - It doesn't look that using this option it would be easier to setup debugging
+
 ## Unstructured
 
 This library needs to be abstracted enough to support multiple platforms: Windows, Linux and macOS. Due to the nature of how input works, it needs to be asynchronous. Currently the component and registry setup looks cumbersome but it must be necessary to support the integration of external modules.
