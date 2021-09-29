@@ -56,7 +56,7 @@ librime/src/rime/algo
     - During the setup, it prepares the internal modules (`core`, `dict`, `levers`, and `gears`), and configures the logger with the levels from the arguments (traits)
     - During the initialization, it loads modules from the arguments (traits) and it also starts the `Service` instance
 
-- [ ] How does the UI handle horizontal vs vertical layout for showing character candidates
+- [x] How does the GUI handle horizontal vs vertical layout for showing character candidates
     - There is a reference in `librime`'s changelog pointing to [this commit](https://github.com/rime/librime/commit/c498f71). The naming used is stacked vs linear candidates
     - The configuration is either `_linear` being `true` or `false`.
     - This value is used in `ProcessKeyEvent` method of the `Selector` class
@@ -69,9 +69,10 @@ librime/src/rime/algo
 
 ## Doubts resolved
 
-- [ ] Where is the UI of the candidates panel coming from
-    - It can be that the UI is not setup in rime and is coming from `ibus`, for example: `https://github.com/ibus/ibus/tree/master/ui`
-    - ibus api exposes methods very tied to the ui, for example: https://ibus.github.io/docs/ibus-1.5/IBusLookupTable.html
+- [x] Where is the GUI of the candidates panel coming from
+    - It can be that the GUI is not setup in rime and is coming from `ibus`, for example: `https://github.com/ibus/ibus/tree/master/ui`
+    - IBus api exposes methods very related to the ui, for example: https://ibus.github.io/docs/ibus-1.5/IBusLookupTable.html
+    - It is almost confirmed that all of the GUI is coming from IBus and is updated via `ibus-rime`
 
 ## Doubts
 

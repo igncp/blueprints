@@ -7,7 +7,7 @@
     - IBusProperty: https://ibus.github.io/docs/ibus-1.5/IBusProperty.html
         - It uses this via a container of props, but I don't understand yet what are props
 
-- IBus also has the concept of engine, and probably for the engines inside `ibus-rime` and `librime` it has a similar meaning
+- IBus also has the concept of engine, and probably for the engines inside `ibus-rime` and `librime` have a similar meaning
 
 ## Links
 

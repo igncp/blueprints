@@ -4,15 +4,19 @@
 
 - Current research:
     - [./ibus-rime.md](./ibus-rime.md)
+    - [./ibus.md](./ibus.md)
     - [./librime.md](./librime.md)
     - [./plum.md](./plum.md)
-    - [./ibus.md](./ibus.md)
 
 - One important third-party dependency is [`OpenCC`](https://github.com/BYVoid/OpenCC) (Open Chinese Connect) which allows transforming between simplified and traditional characters.
 
 ## Code
 
 - `reinterpret_cast` is an expression from C++
+
+## Learnings
+
+- [CMakeLists tutorial](https://web.archive.org/web/20141116113322/http://preetisblog.com/programming/how-to-write-cmakelists-txt)
 
 ## Links
 
