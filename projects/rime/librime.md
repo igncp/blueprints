@@ -35,6 +35,7 @@ librime/src/rime/algo
     - `make release # builds the library, takes around 10 minutes`
     - Had an issue already reported, where I had to update two source files in order to complete the build:
         - https://github.com/rime/librime/pull/476
+        - However this solution didn't work for me, had to add: `#include <cmath>`
     - After completing the process, the artifacts are in `./build/lib/librime.so`, and it also has several commands in `./build/bin`
 - There are several files with `.mk` extension which are used by the main `Makefile` for some specific commands, for example `xcode.mk`
 
@@ -82,9 +83,24 @@ librime/src/rime/algo
     - There are several different parameters, the most important seems to be: `-DBUILD_STATIC=ON`
     - Inside `CMakeLists.txt` the option description is `"Build with dependencies as static libraries"`
     - It doesn't look that using this option it would be easier to setup debugging
+- [ ] What is a shadow candidate? You can see one reference in `src/rime/candidate.cc`
+    - Inside `src/rime/candidate.h` there are a few classes that inherit from `Candidate`
+        - SimpleCandidate, ShadowCandidate, and UniquifiedCandidate
+    - It is used in the simplifier's method `Simplifier::PushBack`, which is called internally from `Simplifier::Convert`
+    - It adds the ShadowCandidate to a received parameter of type  `CandidateQueue`
+    - The key method of the Simplifier, which is implementing a Filter, is `::Apply`
+        - This method is called by the menu for every filter received
+        - The filters are passed from `src/rime/engine.cc` in `TranslateSegments`
+    - It is also inherited by the class `SchemaAction` from `src/rime/gear/schema_list_translator.cc`
+        - In the same file, the class `SchemaSelection` extends `SimpleCandidate` instead
+    - In the `librime/src/rime/candidate.cc` file there is a `UnpackShadowCandidate` which uses the `item` member
+- [ ] What are these classes representing: Menu, Segmentation, Composition, Ticket
+- [ ] How to enable logging for `librime` while running `ibus-rime`?
 
 ## Unstructured
 
 This library needs to be abstracted enough to support multiple platforms: Windows, Linux and macOS. Due to the nature of how input works, it needs to be asynchronous. Currently the component and registry setup looks cumbersome but it must be necessary to support the integration of external modules.
 
 One approach to understand the source code better can be to read the tools first. For example there is one tool called `tools/rime_api_console.cc` which seems like a small REPL to run a few interactive commands. By reading and describing these tools better, can understand the underlying concepts while learning how to use them for better future debugging.
+
+There are some methods that seem unused. One example is `GetGenuineCandidates`.

@@ -46,6 +46,28 @@
 - It looks like the `librime` api may be able to have more than one session at the same time. It exposes a function to find a session with a session id.
 - The XML file is installed under: `/usr/share/ibus/component/rime.xml`, from the `CMakeLists.txt` and `Makefile` files
 
+## Hotkey Menu
+
+- [ ] Where is pressing `F4` (options to change the character type, or en to zh) handled? Where is it saved? Special handler for the 2nd row? Where are the characters from?
+    - Confirmed that when pressing `F4` it calls `Switcher::ProcessKeyEvent` which calls `Switcher::Activate`
+        - Confirmed that at least when clicking one of the special options (e.g. from simplified to tranditional) it calls `Switcher::OnSelect` and it goes inside the `if` condition to apply the command
+        - By printing `command->keyword()` is more clear which `SwitcherCommand` is selected, for example: `"simplification"`
+
+- Extra info
+    - One of the key parts looks to be `librime/src/rime/lever/switcher_settings.cc` as this part is named `switcher`
+        - It gets the hotkeys (e.g. `F4`) from the YAML configuration file
+    - Another important class is `librime/src/rime/switcher.cc`
+        - During `Switcher::InitializeComponents` it initializes 2 translators and 2 processors with my current setup
+        - In the constructor method it uses the `Context` instance to listen for when a candidate is selected to call a callback (`OnSelect`)
+    - The util to change characters type (simplified, tranditional), using OpenCC, is related to the `simplifier.h`
+        - This is registered by `librime/src/rime/gear/gears_module.cc` to be used by the Switcher
+        - It uses the `librime` registry class, which uses the singleton pattern and only exposes one instance
+        - In the `gears` module there are a few types of items registered: filters, processors, segmentors, translators, and formatters
+        - The `Switcher` class has the concept of command, that I am guessing is one of the rows
+    - The util to change between half-width and full-width characters is in: `librime/src/rime/gear/punctuator.cc`
+        - The `Punctuator` main class inherits from the `Processor` class, however the `Simplifier` class inhertis the `Filter` class
+        - The `Processor` class is just in a header file and doesn't have an implementation
+
 ## Doubts resolved
 
 - [x] How is the font size configuration applied in rime UI
@@ -81,19 +103,6 @@
     - On the commit when adding these functions, they were used by referencing them into one engine, but seems they are unused now
     - Maybe for backwards compatibility?
     - Many of them are implemented and used, however found `ibus_rime_engine_cursor_down` which isn't
-
-- [ ] Where is pressing `F4` (options to change the character type, or en to zh) handled? Where is it saved? Special handler for the 2nd row? Where are the characters from?
-    - One of the key parts looks to be `librime/src/rime/lever/switcher_settings.cc` as this part is named `switcher`
-        - It gets the hotkeys (e.g. `F4`) from the YAML configuration file
-    - Another important class is `librime/src/rime/switcher.cc`
-    - The util to change characters type (simplified, tranditional), using OpenCC, is related to the `simplifier.h`
-        - This is registered by `librime/src/rime/gear/gears_module.cc` to be used by the Switcher
-        - It uses the `librime` registry class, which uses the singleton pattern and only exposes one instance
-        - In the `gears` module there are a few types of items registered: filters, processors, segmentors, translators, and formatters
-        - The `Switcher` class has the concept of command, that I am guessing is one of the rows
-    - The util to change between half-width and full-width characters is in: `librime/src/rime/gear/punctuator.cc`
-        - The `Punctuator` main class inherits from the `Processor` class, however the `Simplifier` class inhertis the `Filter` class
-        - The `Processor` class is just in a header file and doesn't have an implementation
 
 ## Links
 
