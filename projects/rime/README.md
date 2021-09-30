@@ -16,9 +16,9 @@
 - The `push_back` method is used in multiple places: https://www.cplusplus.com/reference/vector/vector/push_back/
 - It is important to add the linebreak when using `printf` or the string will not be logged until the line is full
 - For printing numbers with `printf` use `%u`
-- For printing strings:
-    - `std::cout << "Some prefix: " << myString << std::endl;`
-    - You can also replace one of the existing logs with `std::cout`
+- Logs with C++ for `librime`, for `C` use `printf`:
+    - Sample of a common log: `std::cout << "Some prefix: " << myString << std::endl;`
+    - You can also replace one of the existing `librime` logs with `std::cout`
 
 ## Learnings
 
