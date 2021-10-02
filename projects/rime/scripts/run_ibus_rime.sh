@@ -27,7 +27,7 @@ fi
 
 if [[ "$*" == *"--debug"* ]]; then
   echo "Installing debug librime"
-  (cd librime && make debug)
+  (cd librime && make debug || (sleep 100 && exit 1)) # give time to read the error (before closing tmux pane) when this command fails
   (cd librime && sudo make install-debug)
 else
   echo "Installing normal librime"

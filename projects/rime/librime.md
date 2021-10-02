@@ -42,6 +42,7 @@ librime/src/rime/algo
 ## Misc
 
 - The api provides the `RIME_REGISTER_CUSTOM_MODULE` macro, which is also used internally in the `levers` module
+    - It also provides the `RIME_REGISTER_MODULE` macro which dynamically calls the initialize static function for the module (e.g. `gears`)
 - In `librime/tools/rime_deployer.cc` there is a comment that describes three directories: `user_data_dir` (the one in `~/.config`), `shared_data_dir` (the one in `/usr/share`) and others
 - The file `librime/tools/rime_deployer.cc` is the definition for the `rime_deployer` command
 - Dependencies:
@@ -50,6 +51,13 @@ librime/src/rime/algo
     - Other one is `capnproto` which is a data format, similart to JSON but faster
     - This repo depends on `ibus.h` in a few files: main, engine and settings
         - One example of ibus function used is: `ibus_lookup_table_set_cursor_pos`: https://ibus.github.io/docs/ibus-1.5/IBusLookupTable.html
+- The `rime_api.h` header file (just the header file) doesn't have other local files as dependencies
+    - It uses `extern "C"` to support C code
+    - By not having dependencies in the api header file, it doesn't expose any of the internals to external libraries importing it
+- For the `an`, `the`, `of` templates referencing pointers: https://stackoverflow.com/a/6876833
+    - The `As` template, from `common.h`, casts one object class to another by using `std::dynamic_pointer_cast`, seems without any restriction
+- From the error is visible that `level_db` is using a database in the `~/.config/ibus/rime` dir with ending `.userdb`
+    - Each schema has its own `.userdb` directory
 
 ## Doubts Resolved
 
@@ -75,10 +83,13 @@ librime/src/rime/algo
     - IBus api exposes methods very related to the ui, for example: https://ibus.github.io/docs/ibus-1.5/IBusLookupTable.html
     - It is almost confirmed that all of the GUI is coming from IBus and is updated via `ibus-rime`
 
+- [x] How to enable logging for `librime` while running `ibus-rime`?
+    - Both `LOG(INFO)` and `DLOG(INFO)` are used, which are defined by `glog`: https://github.com/google/glog
+    - The logs were already created, from a comment in a mailing list: `Unless otherwise specified, glog writes to the filename "/tmp/<program name>.<hostname>.<user name>.log.<severity level>.<date>.<time>.<pid>" (e.g., "/tmp/hello_world.example.com.hamaji.log.INFO.20080709-222411.10474"). By default, glog copies the log messages of severity level ERROR or FATAL to standard error (stderr) in addition to log files.`
+
 ## Doubts
 
-- What are the main modules of the library?
-
+- [ ] What are the main modules of the library?
 - [ ] What is the difference between a static build (`make librime-static`) and a normal one (`make release`)?
     - There are several different parameters, the most important seems to be: `-DBUILD_STATIC=ON`
     - Inside `CMakeLists.txt` the option description is `"Build with dependencies as static libraries"`
@@ -86,6 +97,7 @@ librime/src/rime/algo
 - [ ] What is a shadow candidate? You can see one reference in `src/rime/candidate.cc`
     - Inside `src/rime/candidate.h` there are a few classes that inherit from `Candidate`
         - SimpleCandidate, ShadowCandidate, and UniquifiedCandidate
+        - The base class `Candidate` seems to be quite important
     - It is used in the simplifier's method `Simplifier::PushBack`, which is called internally from `Simplifier::Convert`
     - It adds the ShadowCandidate to a received parameter of type  `CandidateQueue`
     - The key method of the Simplifier, which is implementing a Filter, is `::Apply`
@@ -95,7 +107,15 @@ librime/src/rime/algo
         - In the same file, the class `SchemaSelection` extends `SimpleCandidate` instead
     - In the `librime/src/rime/candidate.cc` file there is a `UnpackShadowCandidate` which uses the `item` member
 - [ ] What are these classes representing: Menu, Segmentation, Composition, Ticket
-- [ ] How to enable logging for `librime` while running `ibus-rime`?
+    - Except `Ticket`, they are related to the `Switcher` results
+- [ ] What does the `Ticket`'s `name_space` property represent?
+    - When I logged in a few classes it was either empty or it had `processor`
+    - It is used in `dictionary.cc`, `user_dictionary.cc`, `reverse_lookup_dictionary.cc` to get some strings configurations
+    - It is also used in the `reverse_lookup_translator.cc`, `history_translator.cc`, `translator_commons.cc`, `filter_commons.cc`
+    - For filters, processors, etc., this `name_space` is saved during construction
+- [ ] What is the signature feature for?
+    - There is a method in `rime_api.cc` called `RimeConfigUpdateSignature`
+- [ ] What are the differences and uses in the different types of dictionaries?
 
 ## Unstructured
 
